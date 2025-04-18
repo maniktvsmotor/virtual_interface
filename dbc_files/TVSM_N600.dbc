@@ -1,0 +1,1205 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CLUSTER VCU EMS ABS IMU SUSPENSION FRONT_RADAR KEYLESS_ECU ISG REAR_RADAR REGULATOR HEADLAMP SEAT TESTER ACC_LAMP
+
+
+BO_ 254 PecuOutputMsg3: 8 CLUSTER
+ SG_ FOB_COMMAND_BIKE_FINDER : 0|1@1+ (1,0) [0|1] "nan"  VCU
+ SG_ FOB_COMMAND_HANDLEBAR_LOCK : 1|1@1+ (1,0) [0|1] "nan"  VCU
+ SG_ FOB_COMMAND_HANDLEBAR_UNLOCK : 2|1@1+ (1,0) [0|1] "nan"  VCU
+ SG_ FOB_COMMAND_SEAT_UNLOCK : 3|1@1+ (1,0) [0|1] "nan"  VCU
+ SG_ FOB_COMMAND_TANK_LID_UNLOCK : 4|1@1+ (1,0) [0|1] "nan"  VCU
+
+BO_ 256 PecuAuthRequest: 8 VCU
+ SG_ PECU_SUB_ID : 0|8@1+ (1,0) [0|255] "nan"  EMS
+ SG_ PECU_RESPONSE_0 : 8|8@1+ (1,0) [0|255] "nan"  EMS
+ SG_ PECU_RESPONSE_1 : 16|8@1+ (1,0) [0|255] "nan"  EMS
+ SG_ PECU_RESPONSE_2 : 24|8@1+ (1,0) [0|255] "nan"  EMS
+ SG_ PECU_RESPONSE_3 : 32|8@1+ (1,0) [0|255] "nan"  EMS
+
+BO_ 258 VehicleEcuAuthResponse: 8 EMS
+ SG_ VEHICLE_ECU_SUB_ID : 0|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_RESULT : 8|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_0 : 16|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_1 : 24|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_2 : 32|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_3 : 40|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_4 : 48|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ VEHICLE_ECU_AUTH_CHALLENGE_5 : 56|8@1+ (1,0) [0|255] "nan"  VCU
+
+BO_ 288 CLUSTER_QS_CC_TC_SETTING: 8 CLUSTER
+ SG_ CRC_CRUISE_CONTROL : 0|8@1+ (1,0) [0|255] "nan"  ABS,EMS
+ SG_ ALIVE_COUNTER_CRUISE_CONTROL : 8|4@1+ (1,0) [0|14] "nan"  ABS,EMS
+ SG_ FRONT_VEHICLE_BRAKE_STATUS : 12|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+ SG_ CRUISE_CONTROL_ON_OFF : 14|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+ SG_ DISPLAY_SPEED : 16|12@1+ (0.1,0) [0|409.4] "km/h"  ABS,EMS
+ SG_ CRUISE_CONTRL_SET_MINUS : 28|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+ SG_ CRUISE_CONTRL_RESET_PLUS : 30|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+ SG_ DISPLAY_SPEED_UNIT : 32|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+ SG_ DTC_ENABLE_STATUS_CLUSTER : 34|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+ SG_ TC_ENABLE_STATUS_CLUSTER : 35|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+ SG_ LC_ENABLE_STATUS_CLUSTER : 36|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+ SG_ QSS_CLUSTER_ACTIVATION : 37|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+ SG_ TC_INTERVENTION_SETTING : 39|3@1+ (1,0) [0|6] "nan"  ABS,EMS
+ SG_ REAR_BRAKE_SWITCH_STATUS : 42|2@1+ (1,0) [0|2] "nan"  ABS,EMS
+
+BO_ 293 CLUSTER_RIDE_MODE_SETTING: 8 CLUSTER
+ SG_ CRC_CLUSTER_SETTING : 0|8@1+ (1,0) [0|255] "nan"  EMS,ABS,ISG
+ SG_ ALIVE_COUNTER_CLUSTER_SETTING : 8|4@1+ (1,0) [0|14] "nan"  EMS,ABS,ISG
+ SG_ ENG_RIDING_MODE_SET : 12|3@1+ (1,0) [0|6] "nan"  EMS,ABS,ISG
+ SG_ ABS_RIDING_MODE_SET : 15|3@1+ (1,0) [0|6] "nan"  EMS,ABS,ISG
+ SG_ VEHICLE_RIDING_MODE_SET : 18|3@1+ (1,0) [0|6] "nan"  EMS,ABS,ISG
+ SG_ TC_RIDING_MODE_SET : 21|3@1+ (1,0) [0|6] "nan"  EMS,ABS,ISG
+ SG_ ISG_RM_SET : 24|3@1+ (1,0) [0|6] "nan"  EMS,ABS,ISG
+ SG_ IG_OFF_ACK : 27|2@1+ (1,0) [0|2] "nan"  EMS,ABS,ISG
+ SG_ ABS_ON_OFF_SET : 29|1@1+ (1,0) [0|1] "nan"  EMS,ABS,ISG
+
+BO_ 294 SUB_RIDE_MODE_PARAMS: 8 CLUSTER
+ SG_ CRC_SUB_RM_PARAMS : 0|8@1+ (1,0) [0|255] "nan"  EMS,ABS,ISG
+ SG_ ALIVE_COUNTER_SUB_RM_PARAMS : 8|4@1+ (1,0) [0|14] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_1_EMS : 16|3@1+ (1,0) [0|7] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_2_EMS : 19|3@1+ (1,0) [0|7] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_3_EMS : 22|2@1+ (1,0) [0|3] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_4_EMS : 24|2@1+ (1,0) [0|3] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_2_ABS : 29|3@1+ (1,0) [0|7] "nan"  EMS,ABS,ISG
+ SG_ PARAMETER_1_ABS : 26|3@1+ (1,0) [0|7] "nan"  EMS,ABS,ISG
+
+BO_ 320 ABS_TRACTION_CONTROL: 8 ABS
+ SG_ CRC_TRACTION_CONTROL : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,EMS
+ SG_ ALIVE_COUNTER_TRACTION_CONTROL : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ TRACTION_CONTRL_MODE_FB : 12|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ TC_FEATURE_AVAILABILITY_STATUS : 14|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ TARGET_CLUTCH_TORQUE_REQ : 15|10@1+ (0.1,-10) [-10|92.2] "Nm"  CLUSTER,EMS
+ SG_ TORQUE_REQ_STATUS : 25|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ QSS_ENABLE_DISABLE_ABS : 27|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ TC_MODE_CONDITION_STATUS : 29|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ TRACTION_CONTROL_STATUS : 32|3@1+ (1,0) [0|6] "nan"  CLUSTER,EMS
+ SG_ TC_INTERVENTION_SETTING_FDBK : 35|3@1+ (1,0) [0|6] "nan"  CLUSTER,EMS
+ SG_ ODO_ABS : 38|20@1+ (1,0) [0|1048574] "km"  CLUSTER,EMS
+ SG_ DTC_FEATURE_AVAILABILITY_STATUS : 58|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+
+BO_ 336 ENGINE_DATA_1: 8 EMS
+ SG_ CRC_ENGINE_DATA_1 : 0|8@1+ (1,0) [0|255] "nan"  ABS,CLUSTER,ISG
+ SG_ ALIVE_COUNTER_ENGINE_DATA_1 : 8|4@1+ (1,0) [0|14] "nan"  ABS,CLUSTER,ISG
+ SG_ HANDLE_GRIP_OPEN_PERCENTAGE_1 : 12|8@1+ (0.5,-20) [-20|107] "%"  ABS,CLUSTER,ISG
+ SG_ CLUTCH_SW_STATUS : 20|2@1+ (1,0) [0|3] "nan"  ABS,CLUSTER,ISG
+ SG_ THROTTLE_OPEN_PERCENTAGE_1 : 22|8@1+ (0.3937,0) [0|100] "%"  ABS,CLUSTER,ISG
+ SG_ GEAR_POSITION : 30|4@1+ (1,0) [0|15] "nan"  ABS,CLUSTER,ISG
+ SG_ ENGINE_RPM : 34|14@1+ (1,0) [0|16382] "1/min"  ABS,CLUSTER,ISG
+ SG_ KILL_STATUS : 48|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ ES_SWITCH_STATUS : 50|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ KL50_STATUS : 52|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ CLUTCH_SW_STATUS_2 : 54|2@1+ (1,0) [0|3] "nan"  ABS,CLUSTER,ISG
+
+BO_ 337 ENGINE_DATA_5: 8 EMS
+ SG_ CRC_ENGINE_DATA_5 : 0|8@1+ (1,0) [0|255] " "  ABS,CLUSTER
+ SG_ ALIVE_COUNTER_ENGINE_DATA_5 : 8|4@1+ (1,0) [0|14] " "  ABS,CLUSTER
+ SG_ TORQUE_REQ_STATUS_ENG_FB : 12|2@1+ (1,0) [0|2] " "  ABS,CLUSTER
+ SG_ ENGINE_STATUS : 14|2@1+ (1,0) [0|2] " "  ABS,CLUSTER
+ SG_ ACTUAL_ENG_TORQUE : 16|10@1+ (0.1,-10) [-10|92.2] "Nm"  ABS,CLUSTER
+ SG_ QS_UPSHIFT_STATUS_TC : 26|1@1+ (1,0) [0|1] " "  ABS,CLUSTER
+ SG_ QS_DOWNSHIFT_STATUS_TC : 27|1@1+ (1,0) [0|1] " "  ABS,CLUSTER
+ SG_ DRIVER_REQ_TORQUE : 28|10@1+ (0.1,-10) [-10|92.2] "Nm"  ABS,CLUSTER
+ SG_ MINIMUM_ENG_TORQUE : 38|10@1+ (0.1,-10) [-10|92.2] "Nm"  ABS,CLUSTER
+ SG_ MAXIMUM_ENG_TORQUE : 48|10@1+ (0.1,-10) [-10|92.2] "Nm"  ABS,CLUSTER
+ SG_ ENGINE_TORQUE_EXCECUTION : 58|4@1+ (1,0) [0|14] " "  ABS,CLUSTER
+
+BO_ 352 ABS_CRUISE_CONTROL: 8 ABS
+ SG_ CRC_ABS_CRUISE_CONTROL : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,EMS
+ SG_ ALIVE_COUNTER_ABS_CRUISE_CONTROL : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ CRUISE_DEACTIVATION_CONDITION : 12|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ CC_FEATURE_AVAILABILITY_STATUS : 16|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ CRUISE_CONTROL_STATUS : 17|3@1+ (1,0) [0|6] "nan"  CLUSTER,EMS
+ SG_ TARGET_CRUISE_SPEED : 24|12@1+ (0.1,0) [0|409.4] "km/h"  CLUSTER,EMS
+ SG_ TARGET_TORQUE_REQUEST_CC : 36|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ TARGET_CRUISE_TORQUE : 38|10@1+ (0.1,-10) [-10|92.2] "Nm"  CLUSTER,EMS
+
+BO_ 353 ACC_INFORMATION_ABS: 8 ABS
+ SG_ CRC_ACC_ABS : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ALIVE_COUNTER_ACC_ABS : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ACC_DISTANCE : 12|16@1+ (0.25,0) [0|999.75] "m"  CLUSTER,FRONT_RADAR
+ SG_ ACC_SYSTEM_STATUS : 28|1@1+ (1,0) [0|1] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ACC_CONTROL_STATUS : 29|1@1+ (1,0) [0|1] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ACC_CONTROL_MODE : 30|2@1+ (1,0) [0|3] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ACC_TARGET_DISTANCE : 32|16@1+ (0.25,0) [0|999.75] "nan"  CLUSTER,FRONT_RADAR
+ SG_ ACC_FEATURE_AVAIL_STATUS : 48|1@1+ (1,0) [0|1] "nan"  CLUSTER,FRONT_RADAR
+
+BO_ 357 ABS_DATA_2: 8 ABS
+ SG_ CRC_ABS_DATA_2 : 0|8@1+ (1,0) [0|255] "nan"  EMS,CLUSTER
+ SG_ ALIVE_COUNTER_ABS_DATA_2 : 8|4@1+ (1,0) [0|14] "nan"  EMS,CLUSTER
+ SG_ WHEELIE_ANGLE : 12|11@1+ (0.1,-90) [-90|90] "deg"  EMS,CLUSTER
+ SG_ RIDE_MODE_ABS_CONDITION_STATUS : 23|1@1+ (1,0) [0|1] "nan"  EMS,CLUSTER
+ SG_ LEAN_ANGLE : 24|11@1+ (0.1,-90) [-90|90] "deg"  EMS,CLUSTER
+ SG_ RIDING_MODE_ABS_FEEDBACK : 35|3@1+ (1,0) [0|6] "nan"  EMS,CLUSTER
+ SG_ SKID_ANGLE : 38|11@1+ (0.1,-90) [-90|90] "deg"  EMS,CLUSTER
+ SG_ RIDE_MODE_ABS_ERROR_STATUS : 49|1@1+ (1,0) [0|1] "nan"  EMS,CLUSTER
+ SG_ VEHICLE_RIDEMODE_ABS_FDBK : 50|3@1+ (1,0) [0|6] "nan"  EMS,CLUSTER
+ SG_ IMU_STATUS : 53|2@1+ (1,0) [0|3] "nan"  EMS,CLUSTER
+ SG_ ROLL_OVER_OUTPUT : 55|1@1+ (1,0) [0|1] "nan"  EMS,CLUSTER
+ SG_ ABS_VARIANT_CODE : 56|8@1+ (1,0) [0|254] "nan"  EMS,CLUSTER
+
+BO_ 358 ABS_RM_PARAMS_FDBK: 8 ABS
+ SG_ CRC_TRACTION_CONTROL : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,EMS
+ SG_ ALIVE_COUNTER_TRACTION_CONTROL : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ PARAMETER_1_ABS_RM_FDBK : 12|3@1+ (1,0) [0|7] "nan"  CLUSTER,EMS
+ SG_ PARAMETER_2_ABS_RM_FDBK : 15|3@1+ (1,0) [0|7] "nan"  CLUSTER,EMS
+ SG_ TC_RIDING_MODE_FDBK : 18|3@1+ (1,0) [0|6] "nan"  CLUSTER,EMS
+
+BO_ 368 ENGINE_DATA_4: 8 EMS
+ SG_ CRC_ENGINE_DATA_4 : 0|8@1+ (1,0) [0|255] " "  ABS,CLUSTER
+ SG_ ALIVE_COUNTER_ENGINE_DATA_4 : 8|4@1+ (1,0) [0|14] " "  ABS,CLUSTER
+ SG_ CC_TORQUE_REQ_STATUS_ENG_FB : 12|2@1+ (1,0) [0|2] " "  ABS,CLUSTER
+ SG_ APS1_RawVoltage : 16|8@1+ (0.0235,0) [0|5.9925] " "  ABS,CLUSTER
+ SG_ TPS1_RawVoltage : 24|8@1+ (0.0235,0) [0|5.9925] " "  ABS,CLUSTER
+ SG_ APS2_RawVoltage : 32|8@1+ (0.0235,0) [0|5.9925] " "  ABS,CLUSTER
+ SG_ TPS2_RawVoltage : 40|8@1+ (0.0235,0) [0|5.9925] "nan"  ABS,CLUSTER
+ SG_ QSS_RawVoltage : 48|8@1+ (0.0235,0) [0|5.9925] "nan"  ABS,CLUSTER
+
+BO_ 372 Y_AXIS: 8 IMU
+ SG_ YAW_RATE : 0|16@1+ (0.005,-163.84) [-163.84|163.835] "°/s"  ABS
+ SG_ CLU_STAT : 16|4@1+ (1,0) [0|15] "nan"  ABS
+ SG_ YAW_RATE_STATUS : 20|4@1+ (1,0) [0|15] " "  ABS
+ SG_ TEMP_RATE_Z : 24|8@1+ (1,-50) [-50|150] " "  ABS
+ SG_ Y_AXIS_ACC : 32|16@1+ (0.00125,-40.957) [-40.957|40.958] "m/s^2"  ABS
+ SG_ Y_AXIS_COUNT : 48|4@1+ (1,0) [0|15] " "  ABS
+ SG_ Y_AXIS_ACC_STATUS : 52|4@1+ (1,0) [0|15] " "  ABS
+ SG_ CRC_Z_AXIS : 56|8@1+ (1,0) [0|255] " "  ABS
+
+BO_ 373 ENGINE_DATA_3: 8 EMS
+ SG_ CRC_ENGINE_DATA_3 : 0|8@1+ (1,0) [0|255] "nan"  ABS,CLUSTER
+ SG_ ALIVE_COUNTER_ENGINE_DATA_3 : 8|4@1+ (1,0) [0|14] "nan"  ABS,CLUSTER
+ SG_ RIDE_MODE_ENG_CONDITION_STATUS : 12|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER
+ SG_ ENG_RIDING_MODE_FEEDBACK : 13|3@1+ (1,0) [0|6] "nan"  ABS,CLUSTER
+ SG_ RIDE_MODE_ENG_ERROR_STATUS : 16|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER
+ SG_ VEHICLE_RIDEMODE_ENG_FDBK : 17|3@1+ (1,0) [0|6] "nan"  ABS,CLUSTER
+ SG_ THROTTLE_OPEN_PERCENTAGE_2 : 20|8@1+ (0.3937,0) [0|100] "%"  ABS,CLUSTER
+ SG_ HANDLE_GRIP_OPEN_PERCENTAGE_2 : 28|8@1+ (0.5,-20) [-20|107] "%"  ABS,CLUSTER
+ SG_ PARAMETER_1_EMS_RM_FDBK : 36|3@1+ (1,0) [0|3] "nan"  ABS,CLUSTER
+ SG_ PARAMETER_2_EMS_RM_FDBK : 39|3@1+ (1,0) [0|3] "nan"  ABS,CLUSTER
+ SG_ PARAMETER_3_EMS_RM_FDBK : 42|3@1+ (1,0) [0|3] "nan"  ABS,CLUSTER
+ SG_ PARAMETER_4_EMS_RM_FDBK : 45|2@1+ (1,0) [0|3] "nan"  ABS,CLUSTER
+
+BO_ 376 X_AXIS: 8 IMU
+ SG_ ROLL_RATE : 0|16@1+ (0.005,-163.84) [-163.84|163.835] "°/s"  ABS
+ SG_ CLU_STAT5 : 16|4@1+ (1,0) [0|15] "nan"  ABS
+ SG_ ROLL_RATE_STATUS : 20|4@1+ (1,0) [0|15] " "  ABS
+ SG_ DIAGNOSIS_EXTENDED_IMU : 24|8@1+ (1,-50) [-50|150] " "  ABS
+ SG_ X_AXIS_ACC : 32|16@1+ (0.00125,-40.957) [-40.957|40.958] "m/s^2"  ABS
+ SG_ X_AXIS_COUNT : 48|4@1+ (1,0) [0|15] " "  ABS
+ SG_ X_AXIS_ACC_STATUS : 52|4@1+ (1,0) [0|15] " "  ABS
+ SG_ CRC_X_AXIS : 56|8@1+ (1,0) [0|255] " "  ABS
+
+BO_ 380 Z_AXIS: 8 IMU
+ SG_ PITCH_RATE : 0|16@1+ (0.005,-163.84) [-163.84|163.835] "°/s"  ABS
+ SG_ HW_INDEX : 16|4@1+ (1,0) [0|15] "nan"  ABS
+ SG_ PITCH_RATE_STATUS : 20|4@1+ (1,0) [0|15] " "  ABS
+ SG_ Z_AXIS_ACC : 32|16@1+ (0.00125,-40.957) [-40.957|40.958] "m/s^2"  ABS
+ SG_ Z_AXIS_COUNT : 48|4@1+ (1,0) [0|15] " "  ABS
+ SG_ Z_AXIS_ACC_STATUS : 52|4@1+ (1,0) [0|15] " "  ABS
+ SG_ CRC_Y_AXIS : 56|8@1+ (1,0) [0|255] " "  ABS
+
+BO_ 848 ENGINE_DATA_2: 8 EMS
+ SG_ ENGINE_TEMPERATURE : 0|8@1+ (1,-25) [-25|200] "°C"  ABS,CLUSTER,ISG
+ SG_ SIDE_STAND_STATUS : 8|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ ENGINE_WARNING : 10|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER,ISG
+ SG_ MIL_STATUS : 11|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER,ISG
+ SG_ RUNNING_IN_MODE_STATUS : 12|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ GEAR_SHIFT_INDICATION : 14|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ OVER_TEMPERATURE_INDICATION : 16|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER,ISG
+ SG_ ENG_ACC : 17|8@1+ (0.05,-6) [-6|6] "g"  ABS,CLUSTER,ISG
+ SG_ COOLING_FAN_RELAY_STATUS : 25|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER,ISG
+ SG_ COOLANT_TEMPERATURE : 26|8@1+ (1,-25) [-25|200] "°C"  ABS,CLUSTER,ISG
+ SG_ INJECTED_FUEL : 34|16@1+ (1,0) [0|65534] "µl"  ABS,CLUSTER,ISG
+ SG_ ENGINE_ECU_ISS_STATUS : 50|3@1+ (1,0) [0|3] "nan"  ABS,CLUSTER,ISG
+ SG_ CYLINDER_DEACTIVATION_STATUS : 53|2@1+ (1,0) [0|3] "nan"  ABS,CLUSTER,ISG
+
+BO_ 849 ENGINE_DATA_6: 8 EMS
+ SG_ CRC_ENGINE_DATA_6 : 0|8@1+ (1,0) [0|255] "nan"  ABS,CLUSTER,ISG
+ SG_ ALIVE_COUNTER_ENGINE_DATA_6 : 8|4@1+ (1,0) [0|14] "nan"  ABS,CLUSTER,ISG
+ SG_ QSS_FEATURE_AVAILABILITY_STATUS : 12|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ QSS_CLUSTER_ACTIVATION_FDBCK : 14|1@1+ (1,0) [0|1] "nan"  ABS,CLUSTER,ISG
+ SG_ KL15_STATUS : 17|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+ SG_ ISS_LAMP : 19|2@1+ (1,0) [0|2] "nan"  ABS,CLUSTER,ISG
+
+BO_ 850 ENGINE_DATA_7: 8 EMS
+ SG_ INTAKE_AIR_TEMPERATURE : 0|8@1+ (0.75,-48) [-48|142.5] "°C"  ABS,CLUSTER,ISG
+ SG_ MANIFOLD_AIR_PRESSURE : 8|8@1+ (1,0) [0|254] "kPA"  ABS,CLUSTER,ISG
+ SG_ AMBIENT_PRESSURE : 16|10@1+ (1,0) [0|1022] "hPA"  ABS,CLUSTER,ISG
+ SG_ REDUNDANT_ODOMETER : 26|20@1+ (1,0) [0|1048574] "km"  ABS,CLUSTER,ISG
+ SG_ EMS_VARIANT_CODE : 46|8@1+ (1,0) [0|254] "nan"  ABS,CLUSTER,ISG
+ SG_ OIL_PRESSURE_SWITCH_STATUS : 54|2@1+ (1,0) [0|3] "nan"  ABS,CLUSTER,ISG
+ SG_ MANIFOLD_AIR_PRESSURE_2 : 56|8@1+ (1,0) [0|254] "kPA"  ABS,CLUSTER,ISG
+
+BO_ 851 PecuOutputMsg1: 8 VCU
+ SG_ CRC_PECU_OPMSG1 : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,EMS
+ SG_ ALIVE_COUNTER_PECU_OPMSG1 : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ PECU_CLAMP_STATE : 12|3@1+ (1,0) [0|7] "nan"  CLUSTER,EMS
+ SG_ PECU_CLAMP_STATE_STATUS : 15|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ IG_OFF_REQUEST : 16|2@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ ELOCK_STATE : 18|2@1+ (1,0) [0|3] "nan"  CLUSTER,EMS
+ SG_ KEYLESS_SWITCH_PRESS_STATUS : 20|3@1+ (1,0) [0|7] "nan"  CLUSTER,EMS
+ SG_ PEPSECU_ERROR_STATUS : 23|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ CLUSTER_NOTIFICATION : 24|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+
+BO_ 852 PecuOutputMsg2: 8 KEYLESS_ECU
+ SG_ NO_KEYFOB_DETECTED_WARN : 0|1@1+ (1,0) [0|1] "nan"  CLUSTER
+ SG_ KEYFOB_LOWBATTERY_WARN : 1|1@1+ (1,0) [0|1] "nan"  CLUSTER
+
+BO_ 853 CLUSTER_AUTH_REQUEST: 8 CLUSTER
+ SG_ CLUSTER_SUB_ID : 0|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ CLUSTER_RESPONSE_0 : 8|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ CLUSTER_RESPONSE_1 : 16|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ CLUSTER_RESPONSE_2 : 24|8@1+ (1,0) [0|255] "nan"  VCU
+ SG_ CLUSTER_RESPONSE_3 : 32|8@1+ (1,0) [0|255] "nan"  VCU
+
+BO_ 854 VCU_AUTH_RESPONSE: 8 VCU
+ SG_ VCU_SUB_ID : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_RESULT : 8|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_0 : 16|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_1 : 24|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_2 : 32|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_3 : 40|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_4 : 48|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ VCU_AUTH_CHALLENGE_5 : 56|8@1+ (1,0) [0|255] "nan"  CLUSTER
+
+BO_ 1104 ABS_DATA_1: 8 ABS
+ SG_ CRC_ABS_DATA_1 : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER,EMS
+ SG_ ALIVE_COUNTER_ABS_DATA_1 : 8|4@1+ (1,0) [0|14] "nan"  CLUSTER,EMS
+ SG_ ABS_ACTUATION_STATUS : 12|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ BRAKE_SWITCH_STATUS_ABS : 14|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ BRAKE_PAD_PRESSURE_FRONT : 16|8@1+ (0.5,0) [0|127] "bar"  CLUSTER,EMS
+ SG_ EMERGENCY_STOP_SIGNAL_ST : 24|2@1+ (1,0) [0|2] "nan"  CLUSTER,EMS
+ SG_ DISTANCE_FRONT : 27|12@1+ (0.25,0) [0|999.75] "m"  CLUSTER,EMS
+ SG_ DISTANCE_REAR : 39|12@1+ (0.25,0) [0|999.75] "m"  CLUSTER,EMS
+ SG_ ABS_ON_OFF_SET_FDBK : 53|1@1+ (1,0) [0|1] "nan"  CLUSTER,EMS
+ SG_ ABS_OFF_FEATURE_AVAIL_STATUS : 54|2@1+ (1,0) [0|3] "nan"  CLUSTER,EMS
+ SG_ BRAKE_PAD_PRESSURE_REAR : 56|8@1+ (0.5,0) [0|127] "bar"  CLUSTER,EMS
+
+BO_ 1105 ABS_DATA_3: 8 ABS
+ SG_ CRC_SPEED : 0|8@1+ (1,0) [0|255] "nan"  EMS,CLUSTER
+ SG_ ALIVE_COUNTER_SPEED : 8|4@1+ (1,0) [0|14] "nan"  EMS,CLUSTER
+ SG_ WHEEL_SPEED_REAR : 12|13@1+ (0.05625,0) [0|460] "km/h"  EMS,CLUSTER
+ SG_ WHEEL_SPEED_FRONT : 25|13@1+ (0.05625,0) [0|460] "km/h"  EMS,CLUSTER
+ SG_ WHEEL_SPEED_REAR_STATUS : 38|2@1+ (1,0) [0|2] "nan"  EMS,CLUSTER
+ SG_ WHEEL_SPEED_FRONT_STATUS : 40|2@1+ (1,0) [0|2] "nan"  EMS,CLUSTER
+ SG_ LC_STATUS : 42|3@1+ (1,0) [0|6] "nan"  EMS,CLUSTER
+ SG_ NUMBER_OF_LAUNCHES : 45|2@1+ (1,0) [0|3] "nan"  EMS,CLUSTER
+ SG_ ABS_STATUS : 48|3@1+ (1,0) [0|6] "nan"  EMS,CLUSTER
+ SG_ RESERVED_SIGNAL : 51|3@1+ (1,0) [0|7] "nan"  EMS,CLUSTER
+ SG_ WHEEL_ACC : 54|8@1+ (0.05,-5) [-5|7.75] "g"  EMS,CLUSTER
+
+BO_ 1109 ABS_FEATURE_EN: 8 ABS
+ SG_ CRC_ABS_FEATURE_EN : 0|8@1+ (1,0) [0|255] "nan"  CLUSTER
+ SG_ ALIVE_COUNTER_ABS_FEATURE_EN : 8|4@1+ (1,0) [0|14] " "  CLUSTER
+ SG_ FEATURE_EN_RLP : 12|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_SDC : 13|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_MLC : 14|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_WC : 15|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_IMU : 16|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_DTC : 17|1@1+ (1,0) [0|1] " "  CLUSTER
+ SG_ FEATURE_EN_LC : 18|1@1+ (1,0) [0|1] " "  CLUSTER
+
+BO_ 1317 RR_BSD_LCA_RPA: 8 REAR_RADAR
+ SG_ CRC_R_RADAR : 0|8@1+ (1,0) [0|255] "nan"  FRONT_RADAR,CLUSTER
+ SG_ ALIVE_COUNTER_R_RADAR : 8|4@1+ (1,0) [0|14] "nan"  FRONT_RADAR,CLUSTER
+ SG_ BSD_LEFT_WARNINGS : 12|2@1+ (1,0) [0|3] "nan"  FRONT_RADAR,CLUSTER
+ SG_ BSD_RIGHT_WARNINGS : 14|2@1+ (1,0) [0|3] "nan"  FRONT_RADAR,CLUSTER
+ SG_ LCA_LEFT_WARNINGS : 16|2@1+ (1,0) [0|3] "nan"  FRONT_RADAR,CLUSTER
+ SG_ LCA_RIGHT_WARNINGS : 18|2@1+ (1,0) [0|3] "nan"  FRONT_RADAR,CLUSTER
+ SG_ RPA_WARNINGS : 20|2@1+ (1,0) [0|3] "nan"  FRONT_RADAR,CLUSTER
+ SG_ BSD_MODE_ACK : 22|1@1+ (1,0) [0|1] "nan"  FRONT_RADAR,CLUSTER
+ SG_ LCA_MODE_ACK : 23|1@1+ (1,0) [0|1] "nan"  FRONT_RADAR,CLUSTER
+ SG_ RPA_MODE_ACK : 24|1@1+ (1,0) [0|1] "nan"  FRONT_RADAR,CLUSTER
+ SG_ BLINK_LEFT : 25|1@1+ (1,0) [0|1] "nan"  FRONT_RADAR,CLUSTER
+ SG_ BLINK_RIGHT : 26|1@1+ (1,0) [0|1] "nan"  FRONT_RADAR,CLUSTER
+
+BO_ 1360 CLUSTER_DATA_1: 8 CLUSTER
+ SG_ TIMER_SECONDS : 0|24@1+ (1,0) [0|16777215] "s"  ABS,EMS
+ SG_ ODO_CLUSTER : 24|20@1+ (1,0) [0|1048574] "km"  ABS,EMS
+ SG_ CLUSTER_VARIANT_CODE : 44|8@1+ (1,0) [0|254] "nan"  ABS,EMS
+ SG_ ABS_VEH_CODE : 52|4@1+ (1,0) [0|14] "nan"  ABS,EMS
+ SG_ HORN_ENABLE_IP : 56|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+ SG_ HEATED_GRIP_LEVEL_IP : 57|3@1+ (1,0) [0|3] "nan"  ABS,EMS
+ SG_ PRECONDITION_STAT_SPEEDO : 60|1@1+ (1,0) [0|1] "nan"  ABS,EMS
+
+BO_ 1361 CLUSTER_DATA_2: 8 CLUSTER
+ SG_ FUEL_LEVEL : 0|8@1+ (0.1,0) [0|25.4] "l"  ABS,EMS,ISG
+ SG_ PHOTOSENSOR_OUTPUT : 8|8@1+ (0.5,0) [0|100] "%"  ABS,EMS,ISG
+ SG_ TYRE_PRESSURE_FR : 16|6@1+ (0.1,0) [0|6.2] "bar"  ABS,EMS,ISG
+ SG_ TYRE_PRESSURE_RR : 22|6@1+ (0.1,0) [0|6.2] "bar"  ABS,EMS,ISG
+ SG_ TPMS_FR_BATTERY : 28|3@1+ (20,0) [0|100] "%"  ABS,EMS,ISG
+ SG_ TPMS_RR_BATTERY : 31|3@1+ (20,0) [0|100] "%"  ABS,EMS,ISG
+ SG_ VEHICLE_BATTERY_VOLTAGE : 34|8@1+ (0.1,0) [0|25.4] "V"  ABS,EMS,ISG
+ SG_ HEATED_GRIP_FEAT_EN : 42|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+ SG_ HAPTIC_GRIP_FEAT_EN : 43|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+ SG_ WINDSHIELD_FEAT_EN : 44|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+ SG_ KEYLESS_FEAT_EN : 45|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+ SG_ CLIMATIC_SEAT_FEAT_EN : 46|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+ SG_ HOT_SEAT_FEAT_EN : 47|1@1+ (1,0) [0|1] "nan"  ABS,EMS,ISG
+
+BO_ 1376 VCU_1: 8 VCU
+ SG_ GRIP_HEAT_LEVEL_STATUS_LH : 0|3@1+ (1,0) [0|7] "nan"  CLUSTER
+ SG_ GRIP_HEAT_LEVEL_STATUS_RH : 3|3@1+ (1,0) [0|7] "nan"  CLUSTER
+ SG_ GRIP_HAPTIC_LEVEL_STATUS_LH : 6|3@1+ (1,0) [0|7] "nan"  CLUSTER
+ SG_ GRIP_HAPTIC_LEVEL_STATUS_RH : 9|3@1+ (1,0) [0|7] "nan"  CLUSTER
+ SG_ USB_CHARGER_POWER_OP : 12|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ ACC_12V_SOCKET_POWER_OP : 14|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ HORN_ACTIVATION_ENABLE : 16|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ SEAT_SWITCH_STATUS_IP : 18|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ TANK_LID_SWITCH_STATUS_IP : 20|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ SEAT_ACTUATOR_OP : 22|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ TANK_LID_ACTUATOR_OP : 24|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ IGN_OP_STATUS : 26|2@1+ (1,0) [0|3] "nan"  CLUSTER
+
+BO_ 1392 HEADLAMP_CONTROL: 8 CLUSTER
+ SG_ CRC_HEADLAMP_CONTROL : 0|8@1+ (1,0) [0|255] "nan"  HEADLAMP,ACC_LAMP
+ SG_ ALIVE_COUNTER_HEADLAMP_CONTROL : 8|4@1+ (1,0) [0|14] "nan"  HEADLAMP,ACC_LAMP
+ SG_ DRL_PATTERN_SET : 12|4@1+ (1,0) [0|15] "nan"  HEADLAMP,ACC_LAMP
+ SG_ HL_FOLLOW_ME_HOME_SET : 16|2@1+ (1,0) [0|3] "nan"  HEADLAMP,ACC_LAMP
+ SG_ DYNAMIC_INTENSITY_LEVEL_SET : 18|2@1+ (1,0) [0|3] "nan"  HEADLAMP,ACC_LAMP
+ SG_ HL_CTRL_MODE : 20|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ DYNAMIC_HB_CTRL_MODE : 21|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ HL_DAY_NIGHT_MODE : 22|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ BEND_LAMP_ENABLE : 23|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ FOG_LAMP_CONTROL_LH : 24|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ FOG_LAMP_CONTROL_RH : 25|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+ SG_ HL_BEAM_CONTROL : 26|1@1+ (1,0) [0|1] "nan"  HEADLAMP,ACC_LAMP
+
+BO_ 1400 HEADLAMP_CONTROL_FEEDBACK: 8 HEADLAMP
+ SG_ HL_BEAM_STATUS : 0|1@1+ (1,0) [0|1] "nan"  CLUSTER
+ SG_ HL_DAY_NIGHT_MODE_FDBK : 1|1@1+ (1,0) [0|1] "nan"  CLUSTER
+ SG_ DRL_PATTERN_EXEC_STATUS : 2|1@1+ (1,0) [0|1] "nan"  CLUSTER
+ SG_ DYNAMIC_INTENSITY_LEVEL_FDBK : 4|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ HL_ERR_STATUS : 8|3@1+ (1,0) [0|7] "nan"  CLUSTER
+ SG_ DRL_PATTERN_FDBK : 12|4@1+ (1,0) [0|15] "nan"  CLUSTER
+ SG_ CORNER_LAMP_L1_CNTRL : 16|2@1+ (1,0) [0|2] "nan"  CLUSTER
+ SG_ CORNER_LAMP_L2_CNTRL : 18|2@1+ (1,0) [0|2] "nan"  CLUSTER
+
+BO_ 1488 S2C_Control: 8 SEAT
+ SG_ REQUESTED_LEVEL : 0|5@1+ (1,0) [0|31] "nan"  CLUSTER
+ SG_ COOLSEAT_FEATURE_EN_ACK : 5|2@1+ (1,0) [0|3] "nan"  CLUSTER
+ SG_ SEAT_ERROR : 12|4@1+ (1,0) [0|15] "nan"  CLUSTER
+ SG_ TEMPERATURE_PELTIER1 : 16|8@1+ (1,0) [-20|90] "degC"  CLUSTER
+ SG_ TEMPERATURE_PELTIER2 : 24|8@1+ (1,0) [-20|90] "degC"  CLUSTER
+ SG_ TEMPERATURE_AMBIENT : 32|8@1+ (1,0) [-20|90] "degC"  CLUSTER
+
+BO_ 1489 C2S_Control: 8 CLUSTER
+ SG_ SEAT_TARGET_LEVEL : 0|5@1+ (1,0) [0|31] "nan"  SEAT
+ SG_ COOLSEAT_FEATURE_EN : 5|2@1+ (1,0) [0|3] "nan"  SEAT
+
+BO_ 1184 ABS_DEBUG_1: 8 ABS
+ SG_ TC_ACTIVATION_REASON : 0|2@1+ (1,0) [0|3] "nan"  TESTER
+ SG_ CORNERING_ABS_STATUS : 2|2@1+ (1,0) [0|3] "nan"  TESTER
+ SG_ ABS_ACTUATION_DEBUG : 4|2@1+ (1,0) [0|3] "nan"  TESTER
+ SG_ WHEEL_SLIP_PERCENTAGE : 8|8@1+ (0.5,0) [0|105] "%"  TESTER
+ SG_ VEHICLE_ACC : 16|8@1+ (0.05,-6) [-6|6.75] "g"  TESTER
+
+BO_ 1538 KECU_DBG_MODE_REQUEST: 8 TESTER
+ SG_ DEBUG_MSG_BYTES_REQ : 0|64@1+ (1,0) [0|1] "nan"  KEYLESS_ECU
+
+BO_ 1539 KECU_DBG_MODE_RESPONSE: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_RESP : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1770 KECU_DEBUG_OUTPUT_1: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP1 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1771 KECU_DEBUG_OUTPUT_2: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP2 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1772 KECU_DEBUG_OUTPUT_3: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP3 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1773 KECU_DEBUG_OUTPUT_4: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP4 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1774 KECU_DEBUG_OUTPUT_5: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP5 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1775 KECU_DEBUG_OUTPUT_6: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP6 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1776 KECU_DEBUG_OUTPUT_7: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP7 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1777 KECU_DEBUG_OUTPUT_8: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP8 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1778 KECU_DEBUG_OUTPUT_9: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP9 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1779 KECU_DEBUG_OUTPUT_10: 8 KEYLESS_ECU
+ SG_ DEBUG_MSG_BYTES_OP10 : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 1970 KECU_DIAGNOSTIC_REQUEST: 8 TESTER
+ SG_ KECU_DIAG_REQUEST : 0|64@1+ (1,0) [0|1] "nan"  KEYLESS_ECU
+
+BO_ 1978 KECU_DIAGNOSTIC_RESPONSE: 8 KEYLESS_ECU
+ SG_ KECU_DIAG_RESPONSE : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+BO_ 2015 GLOBAL_DIAG_REQ: 8 TESTER
+ SG_ DIAG_GLOBAL_REQ_DATA : 0|64@1+ (1,0) [0|1] "nan"  KEYLESS_ECU
+
+BO_ 2032 TESTER_REQUEST: 8 TESTER
+ SG_ TESTER_REQUEST : 0|64@1+ (1,0) [0|1] "nan"  CLUSTER
+
+BO_ 2033 CLUSTER_RESPONSE: 8 CLUSTER
+ SG_ CLUSTER_RESPONSE : 0|64@1+ (1,0) [0|1] "nan"  TESTER
+
+
+
+CM_ "TVSM CAN matrix - ICE Intel
+Version: 2.2
+Revision date: 2024-07-29 00:00:00
+Prepared by: SMM";
+CM_ BO_ 254 "The message Tx and Rx will change based on the type of keyless module (integrated or separate; LF/RF or BT or RFID).
+1) Separate RF unit- Tx: KEYLESS_ECU; Rx: EMS
+2) Integrated BT unit- Tx: CLUSTER; Rx: VCU";
+CM_ SG_ 254 FOB_COMMAND_BIKE_FINDER "Bike finder command from Keyfob";
+CM_ SG_ 254 FOB_COMMAND_HANDLEBAR_LOCK "Handlebar lock command from Keyfob";
+CM_ SG_ 254 FOB_COMMAND_HANDLEBAR_UNLOCK "Handlebar unlock command from Keyfob";
+CM_ SG_ 254 FOB_COMMAND_SEAT_UNLOCK "Seat latch unlock command through Keyfob";
+CM_ SG_ 254 FOB_COMMAND_TANK_LID_UNLOCK "Fuel tank lid unlock command through Keyfob";
+CM_ BO_ 256 "The message Tx will change based on the type of keyless module (integrated or separate; LF/RF or BT or RFID).
+1) Separate RF unit- Tx: KEYLESS_ECU
+2) Integrated BT unit- Tx: VCU";
+CM_ SG_ 256 PECU_SUB_ID "Subject ID i.e. Authentication Request or Reply message";
+CM_ SG_ 256 PECU_RESPONSE_0 "Authentication Response Byte 0";
+CM_ SG_ 256 PECU_RESPONSE_1 "Authentication Response Byte 1";
+CM_ SG_ 256 PECU_RESPONSE_2 "Authentication Response Byte 2";
+CM_ SG_ 256 PECU_RESPONSE_3 "Authentication Response Byte 3";
+CM_ BO_ 258 "The message Rx will change based on the type of keyless module (integrated or separate; LF/RF or BT or RFID).
+1) Separate RF unit- Rx: KEYLESS_ECU
+2) Integrated BT unit- Rx: VCU";
+CM_ SG_ 258 VEHICLE_ECU_SUB_ID "Subject ID i.e. Random number or Authentication result";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_RESULT "Authentication Result";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_0 "Authentication Challenge Byte 0";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_1 "Authentication Challenge Byte 1";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_2 "Authentication Challenge Byte 2";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_3 "Authentication Challenge Byte 3";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_4 "Authentication Challenge Byte 4";
+CM_ SG_ 258 VEHICLE_ECU_AUTH_CHALLENGE_5 "Authentication Challenge Byte 5";
+CM_ BO_ 288 "The message is for Cruise control, Traction control, Quick shift, Drag torque control, Launch control features setting from User";
+CM_ SG_ 288 CRC_CRUISE_CONTROL "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 75(Dec)  = 0x48";
+CM_ SG_ 288 ALIVE_COUNTER_CRUISE_CONTROL "Standard Protection";
+CM_ SG_ 288 FRONT_VEHICLE_BRAKE_STATUS "It indicates the actuation of  front brake switch if seaparately connected to speedometer, 
+else it indicates the vehicle brake actuation if both switches are connected parallely.";
+CM_ SG_ 288 CRUISE_CONTROL_ON_OFF "This signal shows status of Cruise ON/OFF button";
+CM_ SG_ 288 DISPLAY_SPEED "This signal contains the speed of the front wheel in km / h.  Value transferred is with error added to true speed received from ABS. In case of primary sensor failure, secondary sensor data is displayed.
+";
+CM_ SG_ 288 CRUISE_CONTRL_SET_MINUS "This signal shows status of Cruise SET/-  button";
+CM_ SG_ 288 CRUISE_CONTRL_RESET_PLUS "This signal shows status of Cruise RESET/+  button";
+CM_ SG_ 288 DTC_ENABLE_STATUS_CLUSTER "This signal indicates Drag torque control enable/disable status by rider";
+CM_ SG_ 288 TC_ENABLE_STATUS_CLUSTER "This signal indicates Traction control enable/disable status by rider";
+CM_ SG_ 288 LC_ENABLE_STATUS_CLUSTER "This signal indicates Launch control enable/disable status by rider";
+CM_ SG_ 288 QSS_CLUSTER_ACTIVATION "This signal allows to enable or disable quickshifter functionality via cluster";
+CM_ SG_ 288 TC_INTERVENTION_SETTING "Reserved in N600";
+CM_ SG_ 288 REAR_BRAKE_SWITCH_STATUS "It indicates the actuation of  rear brake switch if separately connected to speedometer";
+CM_ BO_ 293 "The message is for the Ride mode message request from the cluster.";
+CM_ SG_ 293 CRC_CLUSTER_SETTING "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 80 (Dec) = 0x50";
+CM_ SG_ 293 ALIVE_COUNTER_CLUSTER_SETTING "Standard protection!";
+CM_ SG_ 293 ENG_RIDING_MODE_SET "The signal will be reused as Engine riding mode request  in case of Custom ride mode available for the project
+";
+CM_ SG_ 293 TC_RIDING_MODE_SET "This signal indicates mode setting related to traction control";
+CM_ SG_ 293 IG_OFF_ACK "This signal indicates response of IG OFF request from Keyless ECU. 
+In case of integrated Keyless Unit, the signal indicates Igniton Out status from the cluster.";
+CM_ SG_ 293 ABS_ON_OFF_SET "Request made by cluster to enable/disable ABS switch off functionality. 
+Requires signal ABS_OFF_AVAILABILITY_STATUS to understand if rear ABS/complete ABS can be enabled/disabled";
+CM_ BO_ 294 "Message for setting sub ride mode parameters. To be sent only when vehicle is in Custom ride mode.";
+CM_ SG_ 294 CRC_SUB_RM_PARAMS "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 81 (Dec) = 0x51";
+CM_ SG_ 294 ALIVE_COUNTER_SUB_RM_PARAMS "Standard protection!";
+CM_ SG_ 294 PARAMETER_1_EMS "This signal indicates selection of Acceleration for custom ride mode";
+CM_ SG_ 294 PARAMETER_2_EMS "This signal indicates selection of Deceleration for custom ride mode";
+CM_ SG_ 294 PARAMETER_3_EMS "This signal indicates selection of Quickshift Assist for custom ride mode";
+CM_ SG_ 294 PARAMETER_4_EMS "This signal indicates selection of Idle RPM for custom ride mode";
+CM_ SG_ 294 PARAMETER_2_ABS "This signal indicates selection of Braking for custom ride mode";
+CM_ SG_ 294 PARAMETER_1_ABS "This signal indicates the Wheelie control response from the ABS in custom ride mode";
+CM_ BO_ 320 "The message indicates the Traction control, Drag torque control feature details from ABS unit";
+CM_ SG_ 320 CRC_TRACTION_CONTROL "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 25 (Dec) = 0x19";
+CM_ SG_ 320 ALIVE_COUNTER_TRACTION_CONTROL "Standard protection!";
+CM_ SG_ 320 TRACTION_CONTRL_MODE_FB "Not in use for N600, N325";
+CM_ SG_ 320 TC_FEATURE_AVAILABILITY_STATUS "This signal displays the availability of Traction Control in ABS";
+CM_ SG_ 320 TARGET_CLUTCH_TORQUE_REQ "This signal indicates DTC torque request value";
+CM_ SG_ 320 TORQUE_REQ_STATUS "This signal indicates the TC torque request to EMS";
+CM_ SG_ 320 QSS_ENABLE_DISABLE_ABS "This signal indicates enable or disable quickshifter functionality by ABS for TC";
+CM_ SG_ 320 TC_MODE_CONDITION_STATUS "This signal idnicated if the condition for changing ABS TC  mode is met or not met";
+CM_ SG_ 320 TRACTION_CONTROL_STATUS "This signal displays the TC status";
+CM_ SG_ 320 ODO_ABS "This signal contains the total distance covered by the motorcycle.";
+CM_ SG_ 320 DTC_FEATURE_AVAILABILITY_STATUS "This signal displays the availability of Drag Torque Control in ABS";
+CM_ SG_ 336 CRC_ENGINE_DATA_1 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 50 (Dec) = 0x32";
+CM_ SG_ 336 ALIVE_COUNTER_ENGINE_DATA_1 "Standard protection!";
+CM_ SG_ 336 HANDLE_GRIP_OPEN_PERCENTAGE_1 "This signal shall transmit the driver's request (faw_rel_w) in percent. This provides the driver's dependent is the driving value transmitter (throttle grip), the influence of the different throttle grip maps (mode) is here given.";
+CM_ SG_ 336 THROTTLE_OPEN_PERCENTAGE_1 "This signal contains throttle position in terms of %";
+CM_ SG_ 336 GEAR_POSITION "This signal indicates which gear has been lodged.";
+CM_ SG_ 336 ENGINE_RPM "This signal indicates the engine speed.";
+CM_ SG_ 336 KILL_STATUS "By this signal the driver to the Actuation of the emergency-stop switch display. When actuated emergency stop switch, the motor controller switches the fuel pump, ignition and injection immediately. The starter relay is no longer activated";
+CM_ SG_ 336 ES_SWITCH_STATUS "By this signal the driver to the Actuation of the emergency-stop switch display. When actuated emergency stop switch, the motor controller switches the fuel pump, ignition and injection immediately. The starter relay is no longer activated";
+CM_ SG_ 336 KL50_STATUS "This signal indicates whether the starter relay is energized.
+It is already set at the actuation of the start button and is therefore before the meshing of the starter at your disposal
+For ISG Set indicates motoring can happen and 0 no motoring";
+CM_ SG_ 337 CRC_ENGINE_DATA_5 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 45(Dec)  = 0x2D";
+CM_ SG_ 337 ALIVE_COUNTER_ENGINE_DATA_5 "Standard Protection";
+CM_ SG_ 337 TORQUE_REQ_STATUS_ENG_FB "This signal indicates the feedback from EMS to ABS for type of torque request";
+CM_ SG_ 337 ENGINE_STATUS "This signal indicates the Engine status";
+CM_ SG_ 337 ACTUAL_ENG_TORQUE "This signal indicates the actual engine torque";
+CM_ SG_ 337 QS_UPSHIFT_STATUS_TC "This signal indicates QS execution status";
+CM_ SG_ 337 QS_DOWNSHIFT_STATUS_TC "This signal indicates QS downshift status";
+CM_ SG_ 337 DRIVER_REQ_TORQUE "This signal indicates the Driver requested torque from EMS to ABS";
+CM_ SG_ 337 MINIMUM_ENG_TORQUE "For the given gear min engine torque that engine can operate";
+CM_ SG_ 337 MAXIMUM_ENG_TORQUE "For the given gear max engine torque that engine can operate";
+CM_ SG_ 337 ENGINE_TORQUE_EXCECUTION "Present active torque input as considered by EMS";
+CM_ SG_ 352 CRC_ABS_CRUISE_CONTROL "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 30(Dec)  = 0x1E";
+CM_ SG_ 352 ALIVE_COUNTER_ABS_CRUISE_CONTROL "Standard Protection";
+CM_ SG_ 352 CRUISE_DEACTIVATION_CONDITION "This signal displays the CC last deactivation condition in the same ignition cycle";
+CM_ SG_ 352 CC_FEATURE_AVAILABILITY_STATUS "This signal allows to enable or disable CC functionality via cluster";
+CM_ SG_ 352 CRUISE_CONTROL_STATUS "This signal displays the CC status ";
+CM_ SG_ 352 TARGET_CRUISE_SPEED "This signal sends the cruise speed set by the ABS ECU";
+CM_ SG_ 352 TARGET_TORQUE_REQUEST_CC "This signal indicates the feedback from EMS to ABS for type of torque request.
+ Value>= 0x2 is considered as Invalid";
+CM_ SG_ 352 TARGET_CRUISE_TORQUE "This signal indicates the delta torque required by HECU to maintain cruise speed";
+CM_ SG_ 353 CRC_ACC_ABS "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 105(Dec)  = 0x69";
+CM_ SG_ 353 ACC_DISTANCE "This signal indicates the current distance for the ACC feature";
+CM_ SG_ 353 ACC_SYSTEM_STATUS "This signal indicates the ACC feature error status";
+CM_ SG_ 353 ACC_CONTROL_STATUS "This signal indicates whether ACC active status";
+CM_ SG_ 353 ACC_CONTROL_MODE "This signal indicates the ACC control mode (Acceleration / Deceleration / Cruise)";
+CM_ SG_ 353 ACC_TARGET_DISTANCE "This signal indicates the target distance for the ACC feature";
+CM_ SG_ 353 ACC_FEATURE_AVAIL_STATUS "This signal indicates the ACC feature availability status in ABS";
+CM_ SG_ 357 CRC_ABS_DATA_2 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 90 (Dec) = 0x5A";
+CM_ SG_ 357 ALIVE_COUNTER_ABS_DATA_2 "Standard protection!";
+CM_ SG_ 357 RIDE_MODE_ABS_CONDITION_STATUS "This signal indicated if the condition for changing ABS ride mode is met or not met";
+CM_ SG_ 357 RIDE_MODE_ABS_ERROR_STATUS "This signal indicates if there is any ride mode chnage related error in the system";
+CM_ SG_ 357 VEHICLE_RIDEMODE_ABS_FDBK "This signal gives the currently active vehicle ride mode of the ABS system.";
+CM_ SG_ 357 IMU_STATUS "This signal gives the operational status of the IMU ";
+CM_ SG_ 357 ROLL_OVER_OUTPUT "This signal indicates the vehicle roll-over happened  and engine cut-off request based on lean angle data";
+CM_ SG_ 357 ABS_VARIANT_CODE "This signal gives the currently active features enabled in the system";
+CM_ SG_ 358 CRC_TRACTION_CONTROL "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 85 (Dec) = 0x55";
+CM_ SG_ 358 ALIVE_COUNTER_TRACTION_CONTROL "Standard protection!";
+CM_ SG_ 358 PARAMETER_1_ABS_RM_FDBK "This signal indicates selection of Braking for custom ride mode";
+CM_ SG_ 358 PARAMETER_2_ABS_RM_FDBK "This signal indicates the Wheelie control response from the ABS in custom ride mode";
+CM_ SG_ 358 TC_RIDING_MODE_FDBK "This signal indicates mode setting related to traction control";
+CM_ SG_ 368 CRC_ENGINE_DATA_4 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 100 (Dec)  = 0x64";
+CM_ SG_ 368 ALIVE_COUNTER_ENGINE_DATA_4 "Standard Protection";
+CM_ SG_ 368 CC_TORQUE_REQ_STATUS_ENG_FB "This signal indicates the feedback from EMS to ABS for type of torque request";
+CM_ SG_ 368 APS1_RawVoltage "This signal indicates the raw voltage of APS 1 sensor";
+CM_ SG_ 368 TPS1_RawVoltage "This signal indicates the raw voltage of TPS 1 sensor";
+CM_ SG_ 368 APS2_RawVoltage "This signal indicates the raw voltage of APS 2 sensor";
+CM_ SG_ 368 TPS2_RawVoltage "This signal indicates the raw voltage of TPS 2 sensor";
+CM_ SG_ 368 QSS_RawVoltage "This signal indicates the raw voltage of QSS sensor";
+CM_ SG_ 373 CRC_ENGINE_DATA_3 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 40 (Dec) = 0x28";
+CM_ SG_ 373 ALIVE_COUNTER_ENGINE_DATA_3 "Standard protection!";
+CM_ SG_ 373 RIDE_MODE_ENG_CONDITION_STATUS "This signal indicates if the conditions for ride mode change are met or not met";
+CM_ SG_ 373 ENG_RIDING_MODE_FEEDBACK "This signal indicates the engine Ride mode feedback from Engine ECU for cluster request. 
+In case of Custom ride mode, the signal is reused as engine pedal map response from the Engine ECU.";
+CM_ SG_ 373 RIDE_MODE_ENG_ERROR_STATUS "This signal indicates if there is any ride mode change related error in the system";
+CM_ SG_ 373 THROTTLE_OPEN_PERCENTAGE_2 "This signal contains throttle position in terms of %";
+CM_ SG_ 373 HANDLE_GRIP_OPEN_PERCENTAGE_2 "This signal shall transmit the driver's request (faw_rel_w) in percent. This provides the driver's dependent is the driving value transmitter (throttle grip), the influence of the different throttle grip maps (mode) is here given.";
+CM_ SG_ 373 PARAMETER_1_EMS_RM_FDBK "This signal indicates the Acceleration response from the Engine ECU in custom ride mode";
+CM_ SG_ 373 PARAMETER_2_EMS_RM_FDBK "This signal indicates the Deceleration level response from the Engine ECU in custom ride mode";
+CM_ SG_ 373 PARAMETER_3_EMS_RM_FDBK "This signal indicates the Quickshift Assist level response from the Engine ECU in custom ride mode";
+CM_ SG_ 373 PARAMETER_4_EMS_RM_FDBK "This signal indicates the Idle RPM level response from the Engine ECU in custom ride mode";
+CM_ SG_ 848 ENGINE_TEMPERATURE "The temperature to retransmit only in the range of -25 ° C to 165.5 ° C.The engine temperature corresponds depending on the engine cooling water temperature or oil temperature. ";
+CM_ SG_ 848 SIDE_STAND_STATUS "This signal indicates whether the side stand is on or expanded.";
+CM_ SG_ 848 ENGINE_WARNING "The engine warning lamp in the dash is driven by the engine control system when errors occur can:
+- Are relevant to safety
+- Require a workshop visit
+- Are the customers felt.";
+CM_ SG_ 848 MIL_STATUS "This signal is used to control the MIL (malfunction indicator light).";
+CM_ SG_ 848 GEAR_SHIFT_INDICATION "This signal gives the upshift / downshift indication.";
+CM_ SG_ 848 OVER_TEMPERATURE_INDICATION "This signal indicates whether the coolant or oil temperature is too high.";
+CM_ SG_ 848 ENG_ACC "Gives Engine Acceleration and deceleration values";
+CM_ SG_ 848 COOLING_FAN_RELAY_STATUS "This signal indicates whether cooling fan relay is energized or not";
+CM_ SG_ 848 COOLANT_TEMPERATURE "The temperature to retransmit only in the range of -25 ° C to 165.5 ° C.The engine temperature corresponds depending on the engine cooling water temperature or oil temperature. ";
+CM_ SG_ 848 INJECTED_FUEL "This signal contains the accumulated amount of fuel injected. It is used to determine the average consumption and range. The signal is initialized after a reset to 0";
+CM_ SG_ 848 ENGINE_ECU_ISS_STATUS "This gives various engine operating condition inside ISS
+The signal is reserved in N600 project.";
+CM_ SG_ 848 CYLINDER_DEACTIVATION_STATUS "This signal gives the clyinder deactivation status by EMS ECU";
+CM_ SG_ 849 CRC_ENGINE_DATA_6 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 55(Dec)  = 0x37";
+CM_ SG_ 849 ALIVE_COUNTER_ENGINE_DATA_6 "Standard Protection";
+CM_ SG_ 849 QSS_FEATURE_AVAILABILITY_STATUS "This signal indicated whether Quickshifter functionality is enabled or not in EMS ECU via tester tool";
+CM_ SG_ 849 QSS_CLUSTER_ACTIVATION_FDBCK "This signals gives a feedback whether quickshifter functionality is enabled or disabled via cluster";
+CM_ SG_ 849 KL15_STATUS "The signal indicates that the ignition key to the ON position. ";
+CM_ SG_ 849 ISS_LAMP "The signal is reserved in N600 project.";
+CM_ SG_ 850 INTAKE_AIR_TEMPERATURE "This signal shall transmit the intake air temperature.";
+CM_ SG_ 850 MANIFOLD_AIR_PRESSURE "MAP sensor value 1 output";
+CM_ SG_ 850 AMBIENT_PRESSURE "AMBIENT PRESSURE  VALUE";
+CM_ SG_ 850 REDUNDANT_ODOMETER "This signal contains the redundant accumulated traverse distance of the motorcycle.";
+CM_ SG_ 850 EMS_VARIANT_CODE "The value is written in EEPROM of Kombi.ABS control unit evaluates variants identifies at each control device startup. If received version of the stored variant differs, ABS control unit switches (active warning lamp, the ABS function is disabled)";
+CM_ SG_ 850 OIL_PRESSURE_SWITCH_STATUS "Oil pressure switch status";
+CM_ SG_ 850 MANIFOLD_AIR_PRESSURE_2 "MAP sensor value 2 output";
+CM_ BO_ 851 "The message Tx will change based on the type of keyless module (integrated or separate; LF/RF or BT or RFID).
+1) Separate RF unit- Tx: KEYLESS_ECU; 
+2) Integrated BT unit- Tx: VCU; ";
+CM_ SG_ 851 CRC_PECU_OPMSG1 "CRC-Checksum overall signals for E2E protection
+This signal uses the application CRC-ID = 65 (Dec) = 0x41";
+CM_ SG_ 851 ALIVE_COUNTER_PECU_OPMSG1 "Message counter for E2E protection";
+CM_ SG_ 851 PECU_CLAMP_STATE "PECU Clamp state with consideration of feedback";
+CM_ SG_ 851 PECU_CLAMP_STATE_STATUS "Status of the PECU Clamp State signal";
+CM_ SG_ 851 IG_OFF_REQUEST "Engine OFF information to Engine ECU";
+CM_ SG_ 851 ELOCK_STATE "The signal indicates the Elock state locked/unlocked";
+CM_ SG_ 851 KEYLESS_SWITCH_PRESS_STATUS "The signal indicates the keyless switch short press or long press by the user. 
+The signal will be reserved in case of integrated Keyless unit with cluster.";
+CM_ SG_ 851 PEPSECU_ERROR_STATUS "PEPS ECU error state";
+CM_ SG_ 851 CLUSTER_NOTIFICATION "Cluster notification";
+CM_ BO_ 852 "The message will be reserved in case of Integrated Keyless unit with the cluster";
+CM_ SG_ 852 NO_KEYFOB_DETECTED_WARN "Keyfob not found in defined vicinity warning";
+CM_ SG_ 852 KEYFOB_LOWBATTERY_WARN "Keyfob Low battery indication warning";
+CM_ BO_ 853 "The message is reserved in case of separate Keyless entry unit.";
+CM_ SG_ 853 CLUSTER_SUB_ID "Subject ID i.e. Authentication Request or Reply message";
+CM_ SG_ 853 CLUSTER_RESPONSE_0 "Authentication Response Byte 0";
+CM_ SG_ 853 CLUSTER_RESPONSE_1 "Authentication Response Byte 1";
+CM_ SG_ 853 CLUSTER_RESPONSE_2 "Authentication Response Byte 2";
+CM_ SG_ 853 CLUSTER_RESPONSE_3 "Authentication Response Byte 3";
+CM_ BO_ 854 "The message is reserved in case of separate Keyless entry unit.";
+CM_ SG_ 854 VCU_SUB_ID "Subject ID i.e. Random number or Authentication result";
+CM_ SG_ 854 VCU_AUTH_RESULT "Authentication Result";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_0 "Authentication Challenge Byte 0";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_1 "Authentication Challenge Byte 1";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_2 "Authentication Challenge Byte 2";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_3 "Authentication Challenge Byte 3";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_4 "Authentication Challenge Byte 4";
+CM_ SG_ 854 VCU_AUTH_CHALLENGE_5 "Authentication Challenge Byte 5";
+CM_ SG_ 1104 CRC_ABS_DATA_1 "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 35 (Dec) = 0x23";
+CM_ SG_ 1104 ALIVE_COUNTER_ABS_DATA_1 "Standard protection!";
+CM_ SG_ 1104 ABS_ACTUATION_STATUS "This signal tells whether ABS is actuated or not.";
+CM_ SG_ 1104 BRAKE_SWITCH_STATUS_ABS "This signal indicates if the brake switch is pressed";
+CM_ SG_ 1104 BRAKE_PAD_PRESSURE_FRONT "This signal indicates the front brake pad pressure value";
+CM_ SG_ 1104 DISTANCE_FRONT "This signal contains the cumulative distance of the speed sensor on the front wheel. After reaching 999.75 m the signal should start again at 0 - an overflowing of the counter corresponds exactly 1km.
+";
+CM_ SG_ 1104 DISTANCE_REAR "This signal contains the cumulative distance of the speed sensor on the rear wheel. After reaching 999.75 m the signal should start again at 0 - an overflowing of the counter corresponds exactly 1km.";
+CM_ SG_ 1104 ABS_ON_OFF_SET_FDBK "This signal gives status if whether ABS is turned ON or OFF by HECU";
+CM_ SG_ 1104 ABS_OFF_FEATURE_AVAIL_STATUS "This signal displays the availability of feature to turn off ABS in cluster.
+If this is enabled, then menu option to disable ABS will be enabled";
+CM_ SG_ 1104 BRAKE_PAD_PRESSURE_REAR "This signal indicates the rear brake pad pressure value";
+CM_ SG_ 1105 CRC_SPEED "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 20 (Dec) = 0x14";
+CM_ SG_ 1105 ALIVE_COUNTER_SPEED "Standard protection!";
+CM_ SG_ 1105 WHEEL_SPEED_REAR "This signal contains the speed of the rear wheel in km / h.";
+CM_ SG_ 1105 WHEEL_SPEED_FRONT "This signal contains the speed of the front wheel in km / h.";
+CM_ SG_ 1105 WHEEL_SPEED_REAR_STATUS "This signal indicates the status of the rear speed sensor.
+";
+CM_ SG_ 1105 WHEEL_SPEED_FRONT_STATUS "This signal indicates the status of the front speed sensor.";
+CM_ SG_ 1105 LC_STATUS "The signal indicates the status of the Launch control by ABS unit";
+CM_ SG_ 1105 NUMBER_OF_LAUNCHES "The signal indicates the number of launches happened in particular ignition or launch cycle.";
+CM_ SG_ 1105 ABS_STATUS "It is used by Insturment cluster  for controlling the ABS warning lamp,
+
+
+";
+CM_ SG_ 1105 RESERVED_SIGNAL "Reserved signal from Other project (U388)";
+CM_ SG_ 1105 WHEEL_ACC "Gives vehicle Acceleration and deceleration values";
+CM_ SG_ 1109 CRC_ABS_FEATURE_EN "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 63(Dec)  = 0x3F";
+CM_ SG_ 1109 ALIVE_COUNTER_ABS_FEATURE_EN "Standard Protection";
+CM_ SG_ 1109 FEATURE_EN_RLP "Enable or disable Rear Lift Off Protection feature";
+CM_ SG_ 1109 FEATURE_EN_SDC "Enable or disable Slope Dependent control feature";
+CM_ SG_ 1109 FEATURE_EN_MLC "Enable or disable Motorcycle launch feature";
+CM_ SG_ 1109 FEATURE_EN_WC "Enable or disable Wheelie Control feature";
+CM_ SG_ 1109 FEATURE_EN_IMU "Enable or disable IMU feature";
+CM_ SG_ 1109 FEATURE_EN_DTC "Enable or disable Drag Traction Control feature";
+CM_ SG_ 1109 FEATURE_EN_LC "Enable or disable Launch Control feature";
+CM_ SG_ 1317 CRC_R_RADAR "Standard application CRC to hedge.
+This signal uses the application CRC-ID = 125 (Dec) = 0x7D";
+CM_ SG_ 1317 ALIVE_COUNTER_R_RADAR "Standard Protection";
+CM_ SG_ 1317 BSD_LEFT_WARNINGS "This signal indicates the Left side warnings related to Blind Spot Detection";
+CM_ SG_ 1317 BSD_RIGHT_WARNINGS "This signal indicates the Right side warnings related to Blind Spot Detection";
+CM_ SG_ 1317 LCA_LEFT_WARNINGS "This signal indicates the Left side warnings related to Lane Change Assist";
+CM_ SG_ 1317 LCA_RIGHT_WARNINGS "This signal indicates the Right side warnings related to Lane Change Assist";
+CM_ SG_ 1317 RPA_WARNINGS "This signal indicates the Rear park assist warnings";
+CM_ SG_ 1317 BSD_MODE_ACK "This signal indicates the acknowledgement of BSD mode requested by the cluster";
+CM_ SG_ 1317 LCA_MODE_ACK "This signal indicates the acknowledgement of LCA mode requested by the cluster";
+CM_ SG_ 1317 RPA_MODE_ACK "This signal indicates the acknowledgement of RPA mode requested by the cluster";
+CM_ SG_ 1317 BLINK_LEFT "This signal indicates the left LED active status. This is created for synchronization of LED control between Front and Rear RADAR";
+CM_ SG_ 1317 BLINK_RIGHT "This signal indicates the right LED active status. This is created for synchronization of LED control between Front and Rear RADAR";
+CM_ SG_ 1360 TIMER_SECONDS "This counter counts in synchronization with the system / clock the seconds. This signal relative times can be measured. The signal counts in seconds scanning from 0 to about 16 million, which is about 194 days.";
+CM_ SG_ 1360 ODO_CLUSTER "This signal contains the total distance covered by the motorcycle.";
+CM_ SG_ 1360 CLUSTER_VARIANT_CODE "This signal gives the details of the SW features that the cluster SW supports";
+CM_ SG_ 1360 ABS_VEH_CODE "This signal gives the details of the SW features that the cluster SW supports";
+CM_ SG_ 1360 HORN_ENABLE_IP "The signal is to enable/disable horn output to VCU";
+CM_ SG_ 1360 HEATED_GRIP_LEVEL_IP "Heated grip level input from speedo to VCU";
+CM_ SG_ 1360 PRECONDITION_STAT_SPEEDO "This signal is a status indicating pre-conditioning active";
+CM_ SG_ 1361 VEHICLE_BATTERY_VOLTAGE "This signal indicates the battery voltage as seen be Cluster ECU";
+CM_ SG_ 1361 HEATED_GRIP_FEAT_EN "This signal indicates the heated grip feature availability for the vehicle";
+CM_ SG_ 1361 HAPTIC_GRIP_FEAT_EN "This signal indicates the haptic grip feature availability for the vehicle";
+CM_ SG_ 1361 WINDSHIELD_FEAT_EN "This signal indicates the windshield adjustment feature availability for the vehicle";
+CM_ SG_ 1361 KEYLESS_FEAT_EN "This signal indicates the keyless feature availability for the vehicle";
+CM_ SG_ 1361 CLIMATIC_SEAT_FEAT_EN "This signal indicates the climatic seat availability for the vehicle";
+CM_ SG_ 1361 HOT_SEAT_FEAT_EN "This signal indicates the hot seat availability for the vehicle";
+CM_ SG_ 1376 GRIP_HEAT_LEVEL_STATUS_LH "The signal indicates the heating percentage of Grip LH by VCU";
+CM_ SG_ 1376 GRIP_HEAT_LEVEL_STATUS_RH "The signal indicates the heating percentage of Grip RH by VCU";
+CM_ SG_ 1376 GRIP_HAPTIC_LEVEL_STATUS_LH "The signal indicates the haptic actuation percentage of Grip LH by VCU";
+CM_ SG_ 1376 GRIP_HAPTIC_LEVEL_STATUS_RH "The signal indicates the haptic actuation percentage of Grip RH by VCU";
+CM_ SG_ 1376 USB_CHARGER_POWER_OP "This signal indicates the USB charger output from the VCU";
+CM_ SG_ 1376 ACC_12V_SOCKET_POWER_OP "This signal indicates the 12V socket output from the VCU";
+CM_ SG_ 1376 HORN_ACTIVATION_ENABLE "The signal indicates the horn output status from the VCU";
+CM_ SG_ 1376 SEAT_SWITCH_STATUS_IP "This signal indicates the seat switch status as detected by VCU";
+CM_ SG_ 1376 TANK_LID_SWITCH_STATUS_IP "This signal indicates the tank lid switch status as detected by VCU";
+CM_ SG_ 1376 SEAT_ACTUATOR_OP "This signal indicates the seat actuator status as detected by VCU";
+CM_ SG_ 1376 TANK_LID_ACTUATOR_OP "This signal indicates the tank lid actuator status as detected by VCU";
+CM_ SG_ 1376 IGN_OP_STATUS "The signal indicates the ignition key output from the VCU";
+CM_ SG_ 1392 CRC_HEADLAMP_CONTROL "Standard application CRC to hedge. This signal uses the application CRC-ID = 92 (0x5C)";
+CM_ SG_ 1392 ALIVE_COUNTER_HEADLAMP_CONTROL "Standard protection!";
+CM_ SG_ 1392 DRL_PATTERN_SET "This signal indicates user selected patern of DRL/POS LED activation sequence for good bye / welcome lamps.";
+CM_ SG_ 1392 HL_FOLLOW_ME_HOME_SET "This signal indicates the level (i.e time) for which the lamps to be turned ON after ignition OFF. 
+The last updated input from the Speedometer shall be stored in the Headlamp controller before Ignition key off.";
+CM_ SG_ 1392 DYNAMIC_INTENSITY_LEVEL_SET "This signal indicates headlamp intensity control level. 
+This is applicable for both Auto & manual mode.  
+Headlamp controller shall controll the intensity of HB only based on this message.";
+CM_ SG_ 1392 HL_CTRL_MODE "This signal indicates mode for headlamp operation. 
+In auto mode the low beam control will be ON/OFF based on the ambient light sensor. 
+In manual mode the user need to turn ON /OFF the low beam manually.";
+CM_ SG_ 1392 DYNAMIC_HB_CTRL_MODE "This signal indicates whether the dynamic headlamp control in auto mode or manual mode. 
+In auto mode the high beam intensity will be varied automatically and in manual mode user can adjust the level of intensity. 
+This info is only for reference.";
+CM_ SG_ 1392 HL_DAY_NIGHT_MODE "This signal indicates headlamp control request. 
+The Headlamp control - Day / Night - shall be done by the headlamp comtroller based on this message";
+CM_ SG_ 1392 BEND_LAMP_ENABLE "This signal indicates the switch Input to Headlamp for Beam Control";
+CM_ SG_ 1392 FOG_LAMP_CONTROL_LH "This signal is to control LH Fog lamp";
+CM_ SG_ 1392 FOG_LAMP_CONTROL_RH "This signal is to control RH Fog lamp";
+CM_ SG_ 1392 HL_BEAM_CONTROL "This signal indicates the switch Input to Headlamp for Beam Control";
+CM_ SG_ 1400 HL_BEAM_STATUS "Indictaes if HB or LB is enabled in HL. 
+To be used for high beam tell tale activation in speedometer";
+CM_ SG_ 1400 HL_DAY_NIGHT_MODE_FDBK "This signal indicates the status of headlamp";
+CM_ SG_ 1400 DRL_PATTERN_EXEC_STATUS "This signal indicates whether the patern change input from the user is excecuted or not";
+CM_ SG_ 1400 DYNAMIC_INTENSITY_LEVEL_FDBK "This signal indicates headlamp intensity control level feedback from HL to cluster";
+CM_ SG_ 1400 HL_ERR_STATUS "Indicates error present in HL ";
+CM_ SG_ 1400 DRL_PATTERN_FDBK "Feedback for DRL_PATTERN_SET
+The last updated input from the Speedometer shall be stored in the Headlamp controller before Ignition key off.";
+CM_ SG_ 1400 CORNER_LAMP_L1_CNTRL "This signal is used to control  level 1 cornering lamps";
+CM_ SG_ 1400 CORNER_LAMP_L2_CNTRL "This signal is used to control  level 2 cornering lamps";
+CM_ SG_ 1488 REQUESTED_LEVEL "This signal sends the feedback from seat for signal C2S_Control::TargetLevel.";
+CM_ SG_ 1488 COOLSEAT_FEATURE_EN_ACK "Acknowledgement for the Coolseat_Feature_EN received from cluster";
+CM_ SG_ 1488 SEAT_ERROR "This signal provides the if there is any error triggered in seat";
+CM_ SG_ 1488 TEMPERATURE_PELTIER1 "Temperature measured on seat";
+CM_ SG_ 1488 TEMPERATURE_PELTIER2 "Temperature measured on seat";
+CM_ SG_ 1488 TEMPERATURE_AMBIENT "Ambient temperature measured at seat";
+CM_ SG_ 1489 SEAT_TARGET_LEVEL "Provide target temperature seat should maintain";
+CM_ SG_ 1489 COOLSEAT_FEATURE_EN "Whether Coolseat feature is enabled in vehicle or not";
+CM_ BO_ 1184 "The message is for debud purpose - ABS unit";
+CM_ SG_ 1184 TC_ACTIVATION_REASON "Indicates reason for activation of TC.";
+CM_ SG_ 1184 CORNERING_ABS_STATUS "This signal displays the activation status of cornering ABS by HECU";
+CM_ SG_ 1184 ABS_ACTUATION_DEBUG "This signal provides reason for ABS if actuated.";
+CM_ SG_ 1184 WHEEL_SLIP_PERCENTAGE "Indicates percentage of difference between surface speed of the wheel and actual speed of vehicle";
+CM_ BO_ 1538 "The message is for tester communication (debug message)";
+CM_ SG_ 1538 DEBUG_MSG_BYTES_REQ "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1539 "The message is for tester communication (debug message)";
+CM_ SG_ 1539 DEBUG_MSG_BYTES_RESP "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1770 "The message is for tester communication (debug message)";
+CM_ SG_ 1770 DEBUG_MSG_BYTES_OP1 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1771 "The message is for tester communication (debug message)";
+CM_ SG_ 1771 DEBUG_MSG_BYTES_OP2 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1772 "The message is for tester communication (debug message)";
+CM_ SG_ 1772 DEBUG_MSG_BYTES_OP3 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1773 "The message is for tester communication (debug message)";
+CM_ SG_ 1773 DEBUG_MSG_BYTES_OP4 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1774 "The message is for tester communication (debug message)";
+CM_ SG_ 1774 DEBUG_MSG_BYTES_OP5 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1775 "The message is for tester communication (debug message)";
+CM_ SG_ 1775 DEBUG_MSG_BYTES_OP6 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1776 "The message is for tester communication (debug message)";
+CM_ SG_ 1776 DEBUG_MSG_BYTES_OP7 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1777 "The message is for tester communication (debug message)";
+CM_ SG_ 1777 DEBUG_MSG_BYTES_OP8 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1778 "The message is for tester communication (debug message)";
+CM_ SG_ 1778 DEBUG_MSG_BYTES_OP9 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1779 "The message is for tester communication (debug message)";
+CM_ SG_ 1779 DEBUG_MSG_BYTES_OP10 "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1970 "The message is for tester communication (debug message)";
+CM_ SG_ 1970 KECU_DIAG_REQUEST "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 1978 "The message is for tester communication (debug message)";
+CM_ SG_ 1978 KECU_DIAG_RESPONSE "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 2015 "The message is for tester communication (debug message)";
+CM_ SG_ 2015 DIAG_GLOBAL_REQ_DATA "The signal is used as communication between tester tool and keyless entry unit.";
+CM_ BO_ 2032 "The message is for tester communication (debug message)";
+CM_ SG_ 2032 TESTER_REQUEST "The signal is used as communication between tester tool and cluster unit.";
+CM_ BO_ 2033 "The message is for tester communication (debug message)";
+CM_ SG_ 2033 CLUSTER_RESPONSE "The signal is used as communication between tester tool and cluster unit.";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Spontaneous","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 1000000;
+BA_DEF_ BU_  "DiagnosticStationAdress" HEX 0 255;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "Manufacturer" "TVSM";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "DiagnosticStationAdress" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "Manufacturer" "TVSM";
+BA_ "BusType" "CAN";
+BA_ "DBName" "Database_v2_2";
+BA_ "GenMsgCycleTime" BO_ 254 0;
+BA_ "GenMsgSendType" BO_ 254 1;
+BA_ "GenMsgCycleTime" BO_ 256 0;
+BA_ "GenMsgSendType" BO_ 256 1;
+BA_ "GenMsgCycleTime" BO_ 258 0;
+BA_ "GenMsgSendType" BO_ 258 1;
+BA_ "GenMsgCycleTime" BO_ 288 10;
+BA_ "GenMsgCycleTime" BO_ 293 100;
+BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgCycleTime" BO_ 320 20;
+BA_ "GenMsgCycleTime" BO_ 336 10;
+BA_ "GenMsgCycleTime" BO_ 337 20;
+BA_ "GenMsgCycleTime" BO_ 352 10;
+BA_ "GenMsgCycleTime" BO_ 353 20;
+BA_ "GenMsgCycleTime" BO_ 357 100;
+BA_ "GenMsgCycleTime" BO_ 358 100;
+BA_ "GenMsgCycleTime" BO_ 368 10;
+BA_ "GenMsgCycleTime" BO_ 372 10;
+BA_ "GenMsgCycleTime" BO_ 373 100;
+BA_ "GenMsgCycleTime" BO_ 376 10;
+BA_ "GenMsgCycleTime" BO_ 380 10;
+BA_ "GenMsgCycleTime" BO_ 848 100;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "GenMsgCycleTime" BO_ 850 100;
+BA_ "GenMsgCycleTime" BO_ 851 50;
+BA_ "GenMsgCycleTime" BO_ 852 100;
+BA_ "GenMsgCycleTime" BO_ 853 100;
+BA_ "GenMsgCycleTime" BO_ 854 100;
+BA_ "GenMsgCycleTime" BO_ 1104 50;
+BA_ "GenMsgCycleTime" BO_ 1105 50;
+BA_ "GenMsgCycleTime" BO_ 1109 1000;
+BA_ "GenMsgCycleTime" BO_ 1317 200;
+BA_ "GenMsgCycleTime" BO_ 1360 100;
+BA_ "GenMsgCycleTime" BO_ 1361 1000;
+BA_ "GenMsgCycleTime" BO_ 1376 100;
+BA_ "GenMsgCycleTime" BO_ 1392 100;
+BA_ "GenMsgCycleTime" BO_ 1400 100;
+BA_ "GenMsgCycleTime" BO_ 1488 1000;
+BA_ "GenMsgCycleTime" BO_ 1489 1000;
+BA_ "GenMsgCycleTime" BO_ 1184 10;
+BA_ "GenMsgCycleTime" BO_ 1538 0;
+BA_ "GenMsgSendType" BO_ 1538 1;
+BA_ "GenMsgCycleTime" BO_ 1539 0;
+BA_ "GenMsgSendType" BO_ 1539 1;
+BA_ "GenMsgCycleTime" BO_ 1770 0;
+BA_ "GenMsgSendType" BO_ 1770 1;
+BA_ "GenMsgCycleTime" BO_ 1771 0;
+BA_ "GenMsgSendType" BO_ 1771 1;
+BA_ "GenMsgCycleTime" BO_ 1772 0;
+BA_ "GenMsgSendType" BO_ 1772 1;
+BA_ "GenMsgCycleTime" BO_ 1773 0;
+BA_ "GenMsgSendType" BO_ 1773 1;
+BA_ "GenMsgCycleTime" BO_ 1774 0;
+BA_ "GenMsgSendType" BO_ 1774 1;
+BA_ "GenMsgCycleTime" BO_ 1775 0;
+BA_ "GenMsgSendType" BO_ 1775 1;
+BA_ "GenMsgCycleTime" BO_ 1776 0;
+BA_ "GenMsgSendType" BO_ 1776 1;
+BA_ "GenMsgCycleTime" BO_ 1777 0;
+BA_ "GenMsgSendType" BO_ 1777 1;
+BA_ "GenMsgCycleTime" BO_ 1778 0;
+BA_ "GenMsgSendType" BO_ 1778 1;
+BA_ "GenMsgCycleTime" BO_ 1779 0;
+BA_ "GenMsgSendType" BO_ 1779 1;
+BA_ "GenMsgCycleTime" BO_ 1970 0;
+BA_ "GenMsgSendType" BO_ 1970 1;
+BA_ "GenMsgCycleTime" BO_ 1978 0;
+BA_ "GenMsgSendType" BO_ 1978 1;
+BA_ "GenMsgCycleTime" BO_ 2015 0;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "GenMsgCycleTime" BO_ 2032 0;
+BA_ "GenMsgSendType" BO_ 2032 1;
+BA_ "GenMsgCycleTime" BO_ 2033 0;
+BA_ "GenMsgSendType" BO_ 2033 1;
+VAL_ 254 FOB_COMMAND_BIKE_FINDER 0 "No Command" 1 "Fob Command Bike Finder" ;
+VAL_ 254 FOB_COMMAND_HANDLEBAR_LOCK 0 "No Command" 1 "Fob Command Handlebar Lock" ;
+VAL_ 254 FOB_COMMAND_HANDLEBAR_UNLOCK 0 "No Command" 1 "Fob Command Handlebar Unlock" ;
+VAL_ 254 FOB_COMMAND_SEAT_UNLOCK 0 "No Command" 1 "Fob Command Seat Unlock" ;
+VAL_ 254 FOB_COMMAND_TANK_LID_UNLOCK 0 "No Command" 1 "Fob Command Tank lid Unlock" ;
+VAL_ 256 PECU_SUB_ID 0 "Default" 1 "Authentication request" 2 "Reply message" 3 "Reserved" ;
+VAL_ 258 VEHICLE_ECU_SUB_ID 0 "Default" 1 "Random number" 2 "Authentication result" 3 "Reserved" ;
+VAL_ 258 VEHICLE_ECU_AUTH_RESULT 0 "Successful" 1 "Failed" 2 "Reserved" ;
+VAL_ 288 ALIVE_COUNTER_CRUISE_CONTROL 15 "Signal invalid" ;
+VAL_ 288 FRONT_VEHICLE_BRAKE_STATUS 3 "Signal Invalid" 2 "Brake Sw. not actuated" 1 "Brake Sw. actuated" 0 "Defective switch" ;
+VAL_ 288 CRUISE_CONTROL_ON_OFF 0 "Switch not pressed" 1 "Switch pressed" 2 "Switch defective" 3 "Signal invalid" ;
+VAL_ 288 DISPLAY_SPEED 4095 "Signal invalid" ;
+VAL_ 288 CRUISE_CONTRL_SET_MINUS 0 "Switch not pressed" 1 "Switch pressed" 2 "Switch defective" 3 "Signal invalid" ;
+VAL_ 288 CRUISE_CONTRL_RESET_PLUS 0 "Switch not pressed" 1 "Switch pressed" 2 "Switch Defective" 3 "Signal invalid" ;
+VAL_ 288 DISPLAY_SPEED_UNIT 0 "Reserved" 1 "kmph" 2 "miles per hour" 3 "Signal invalid" ;
+VAL_ 288 DTC_ENABLE_STATUS_CLUSTER 1 "DTC ON" 0 "DTC OFF" ;
+VAL_ 288 TC_ENABLE_STATUS_CLUSTER 1 "TC ON" 0 "TC OFF" ;
+VAL_ 288 LC_ENABLE_STATUS_CLUSTER 1 "LC ON" 0 "LC OFF" ;
+VAL_ 288 QSS_CLUSTER_ACTIVATION 1 "QS Active" 0 "QS not active" ;
+VAL_ 288 TC_INTERVENTION_SETTING 0 "Reserve" 1 "LEVEL 1" 2 "LEVEL 2" 3 "LEVEL 3" 4 "LEVEL 4" 5 "Reserve" 6 "Reserve" 7 "Signal invalid" ;
+VAL_ 288 REAR_BRAKE_SWITCH_STATUS 3 "Signal Invalid" 2 "Brake Sw. not actuated" 1 "Brake Sw. actuated" 0 "Defective switch" ;
+VAL_ 293 ALIVE_COUNTER_CLUSTER_SETTING 15 "Signal invalid" ;
+VAL_ 293 ENG_RIDING_MODE_SET 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Custom" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 293 ABS_RIDING_MODE_SET 0 "Reserve" 1 "Level 1" 2 "Level 2" 3 "Level 3" 4 "Level 4" 5 "Custom" 6 "Reserve" 7 "Signal invalid" ;
+VAL_ 293 VEHICLE_RIDING_MODE_SET 7 "Invalid" 6 "Custom mode" 5 "Mode 5" 4 "Mode 4" 3 "Mode 3" 2 "Mode 2" 1 "Mode 1" 0 "Reserve" ;
+VAL_ 293 TC_RIDING_MODE_SET 7 "INVALID" 6 "Reserve" 5 "Reserve" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserved" ;
+VAL_ 293 ISG_RM_SET 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Reserve" 2 "Reserve" 1 "Reserve" 0 "Reserve" ;
+VAL_ 293 IG_OFF_ACK 0 "Switch off ignition" 1 "Do not switch off ignition" 2 "Virtual ignition ON (ES disabled)" 3 "Signal invalid" ;
+VAL_ 293 ABS_ON_OFF_SET 0 "TURN ON ABS" 1 "TURN OFF ABS" ;
+VAL_ 294 ALIVE_COUNTER_SUB_RM_PARAMS 15 "Signal invalid" ;
+VAL_ 294 PARAMETER_1_EMS 7 "Signal invalid" 6 "Reserve" 5 "Level 5" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 294 PARAMETER_2_EMS 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 294 PARAMETER_3_EMS 3 "Signal invalid" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 294 PARAMETER_4_EMS 3 "Signal invalid" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 294 PARAMETER_2_ABS 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 294 PARAMETER_1_ABS 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 320 ALIVE_COUNTER_TRACTION_CONTROL 15 "Signal invalid" ;
+VAL_ 320 TRACTION_CONTRL_MODE_FB 0 "Mode 1" 1 "Mode 2" 2 "Mode 3" 3 "Invalid" ;
+VAL_ 320 TC_FEATURE_AVAILABILITY_STATUS 0 "TC Not available" 1 "TC available" ;
+VAL_ 320 TARGET_CLUTCH_TORQUE_REQ 1023 "Signal invalid" ;
+VAL_ 320 TORQUE_REQ_STATUS 3 "Invalid" 2 "DTC" 1 "MTC" 0 "No control" ;
+VAL_ 320 QSS_ENABLE_DISABLE_ABS 2 "RESERVED" 3 "INVALID" 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 320 TC_MODE_CONDITION_STATUS 0 "Condition for mode change not met" 1 "Condtion for mode change  met" ;
+VAL_ 320 TRACTION_CONTROL_STATUS 0 "TC NOT ACTIVE" 1 "TC ACTIVE INTERVENTION" 2 "TC ERROR" 3 "TC INTIALIZING" 4 "TC DISABLED BY RIDER" 6 "Cornering TC is not working" 7 "Signal invalid" ;
+VAL_ 320 TC_INTERVENTION_SETTING_FDBK 0 "Reserve" 1 "LEVEL 1" 2 "LEVEL 2" 3 "LEVEL 3" 4 "LEVEL 4" 5 "Reserve" 6 "Reserve" 7 "Signal invalid" ;
+VAL_ 320 ODO_ABS 1048575 "Signal invalid" ;
+VAL_ 320 DTC_FEATURE_AVAILABILITY_STATUS 0 "DTC Not available" 1 "DTC available" ;
+VAL_ 336 ALIVE_COUNTER_ENGINE_DATA_1 15 "Signal invalid" ;
+VAL_ 336 HANDLE_GRIP_OPEN_PERCENTAGE_1 255 "Signal invalid" ;
+VAL_ 336 CLUTCH_SW_STATUS 0 "Clutch Sw. Not pressed" 1 "Clutch Sw. pressed fully" 2 "Clutch sw pressed partially" 3 "Signal invalid/Clutch failure" ;
+VAL_ 336 THROTTLE_OPEN_PERCENTAGE_1 255 "Signal invalid" ;
+VAL_ 336 GEAR_POSITION 0 "Reverse Gear" 1 "1 Gear" 2 "Nuetral" 3 "Parking" 4 "2 Gear" 5 "Forward gear" 6 "Reserved " 7 "3 Gear" 8 "4 Gear" 9 "Reserve" 10 "Reserve" 11 "5 Gear" 12 "Reserve" 13 "6 Gear" 14 "Reserve" 15 "Signal invalid" ;
+VAL_ 336 ENGINE_RPM 16383 "Signal invalid" ;
+VAL_ 336 KILL_STATUS 0 "Kill OFF" 1 "Kill ON" 2 "Reserved" 3 "Signal invalid" ;
+VAL_ 336 ES_SWITCH_STATUS 0 "ES switch not pressed" 1 "ES switch pressed" 2 "Reserved" 3 "Signal invalid" ;
+VAL_ 336 KL50_STATUS 0 "Relay not activated" 1 "Relay activated" 2 "Reserved" 3 "Signal invalid" ;
+VAL_ 336 CLUTCH_SW_STATUS_2 0 "Clutch sw 2 Not pressed" 1 "Clutch sw 2 pressed fully" 2 "Clutch sw 2 pressed partially" 3 "Signal invalid/Clutch sw 2 failure" ;
+VAL_ 337 ALIVE_COUNTER_ENGINE_DATA_5 15 "Signal invalid" ;
+VAL_ 337 TORQUE_REQ_STATUS_ENG_FB 3 "Invalid" 2 "DTC" 1 "MTC" 0 "No control" ;
+VAL_ 337 ENGINE_STATUS 0 "Running" 1 "CRANKING" 2 "Stalled" 3 "Invalid" ;
+VAL_ 337 ACTUAL_ENG_TORQUE 1023 "Signal invalid" ;
+VAL_ 337 QS_UPSHIFT_STATUS_TC 1 "Upshift" 0 "No Upshift" ;
+VAL_ 337 QS_DOWNSHIFT_STATUS_TC 1 "Downshift" 0 "No Downshift" ;
+VAL_ 337 DRIVER_REQ_TORQUE 1023 "Signal invalid" ;
+VAL_ 337 MINIMUM_ENG_TORQUE 1023 "Signal invalid" ;
+VAL_ 337 MAXIMUM_ENG_TORQUE 1023 "Signal invalid" ;
+VAL_ 337 ENGINE_TORQUE_EXCECUTION 4 "QS functional" 3 "CC torque from HECU" 2 "TC torque from HECU" 1 "Driver req torque" 0 "No operation" ;
+VAL_ 352 ALIVE_COUNTER_ABS_CRUISE_CONTROL 15 "Signal invalid" ;
+VAL_ 352 CRUISE_DEACTIVATION_CONDITION 15 "Signal Invalid" 14 "No deactivation input" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "OTHER ERRORS" 9 "THROTTLE BLIP" 8 "MIL" 7 "MULTIPLE GEAR SHIFTS" 6 "VEHICLE ACC/ DECELERATION" 5 "WHEEL SLIP " 4 "CRUISE BUTTON OFF" 3 "RIDE MODE CHANGE" 2 "GEAR CHANGE" 1 "CLUTCH PRESSED" 0 "BRAKES PRESSED" ;
+VAL_ 352 CC_FEATURE_AVAILABILITY_STATUS 1 "CC AVAILABLE" 0 "CC NOT AVAILABLE" ;
+VAL_ 352 CRUISE_CONTROL_STATUS 5 "CC  ERROR_FAILURE" 0 "CC NOT ACTIVE" 1 "CC  STAND BY" 2 "CC CRUISE" 3 "CC SUSPEND" 4 "CC TAKE CONTROL" 7 "Signal invalid" ;
+VAL_ 352 TARGET_CRUISE_SPEED 4095 "Signal invalid" ;
+VAL_ 352 TARGET_TORQUE_REQUEST_CC 2 "Invalid or cannot be met" 1 "CC control Active" 0 "No control" ;
+VAL_ 352 TARGET_CRUISE_TORQUE 1023 "Signal invalid" ;
+VAL_ 353 ALIVE_COUNTER_ACC_ABS 15 "Signal invalid" ;
+VAL_ 353 ACC_SYSTEM_STATUS 0 "No error" 1 "Error" ;
+VAL_ 353 ACC_CONTROL_STATUS 0 "ACC inactive" 1 "ACC active" ;
+VAL_ 353 ACC_CONTROL_MODE 0 "Reserve" 1 "Acceleration" 2 "Deceleration" 3 "Cruise" ;
+VAL_ 353 ACC_FEATURE_AVAIL_STATUS 0 "Feature not available" 1 "Feature available" ;
+VAL_ 357 ALIVE_COUNTER_ABS_DATA_2 15 "Signal invalid" ;
+VAL_ 357 WHEELIE_ANGLE 2047 "Signal Invalid" ;
+VAL_ 357 RIDE_MODE_ABS_CONDITION_STATUS 0 "Codition for mode change not met" 1 "Condtion for mode change  met" ;
+VAL_ 357 LEAN_ANGLE 2047 "Signal Invalid" ;
+VAL_ 357 RIDING_MODE_ABS_FEEDBACK 0 "Reserve" 1 "Level 1" 2 "Level 2" 3 "Level 3" 4 "Level 4" 5 "Custom" 6 "Reserve" 7 "Signal invalid" ;
+VAL_ 357 SKID_ANGLE 2047 "Signal Invalid" ;
+VAL_ 357 RIDE_MODE_ABS_ERROR_STATUS 0 "No Ride Mode Error in EMS" 1 "Ride Mode Error present in EMS" ;
+VAL_ 357 VEHICLE_RIDEMODE_ABS_FDBK 7 "Invalid" 6 "Custom mode" 5 "Mode 5" 4 "Mode 4" 3 "Mode 3" 2 "Mode 2" 1 "Mode 1" 0 "Reserve" ;
+VAL_ 357 IMU_STATUS 0 "No Error" 1 "IMU Error" 2 "Other" 3 "Invalid" ;
+VAL_ 357 ROLL_OVER_OUTPUT 0 "Roll over cut-off inactive" 1 "Roll over cut-off active" ;
+VAL_ 357 ABS_VARIANT_CODE 255 "SIGNAL INVALID" 0 "QS=0,CC=0,TC=0,DTC=0" 1 "QS=0,CC=0,TC=1,DTC=0" 2 "QS=0,CC=1,TC=0,DTC=0" 3 "QS=0,CC=1,TC=1,DTC=0" 4 "QS=1,CC=0,TC=0,DTC=0" 5 "QS=1,CC=0,TC=1,DTC=0" 6 "QS=1,CC=1,TC=0,DTC=0" 7 "QS=1,CC=1,TC=1,DTC=0" 8 "QS=0,CC=0,TC=0,DTC=1" 9 "QS=0,CC=0,TC=1,DTC=1" 10 "QS=0,CC=1,TC=0,DTC=1" 11 "QS=0,CC=1,TC=1,DTC=1" 12 "QS=1,CC=0,TC=0,DTC=1" 13 "QS=1,CC=0,TC=1,DTC=1" 14 "QS=1,CC=1,TC=0,DTC=1" 15 "QS=1,CC=1,TC=1,DTC=1" ;
+VAL_ 358 ALIVE_COUNTER_TRACTION_CONTROL 15 "Signal invalid" ;
+VAL_ 358 PARAMETER_1_ABS_RM_FDBK 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 358 PARAMETER_2_ABS_RM_FDBK 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 358 TC_RIDING_MODE_FDBK 7 "INVALID" 6 "Reserve" 5 "Reserve" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserved" ;
+VAL_ 368 ALIVE_COUNTER_ENGINE_DATA_4 15 "Signal invalid" ;
+VAL_ 368 CC_TORQUE_REQ_STATUS_ENG_FB 2 "Invalid or cannot be met" 1 "CC control Active" 0 "No control" ;
+VAL_ 373 ALIVE_COUNTER_ENGINE_DATA_3 15 "Signal invalid" ;
+VAL_ 373 RIDE_MODE_ENG_CONDITION_STATUS 0 "Condition mode change not met" 1 "Condtion for mode change met" ;
+VAL_ 373 ENG_RIDING_MODE_FEEDBACK 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Custom" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 373 RIDE_MODE_ENG_ERROR_STATUS 0 "No Ride Mode Error in EMS" 1 "Ride Mode Error present in EMS" ;
+VAL_ 373 VEHICLE_RIDEMODE_ENG_FDBK 0 "Reserve" 1 "Race (Race+Race)" 2 "Street(Race+Normal)" 3 "Rain(City+Wet)" 4 "City(City+Normal)" 5 "SM(Race+SM)" 6 "Custom mode" 7 "Signal invalid" ;
+VAL_ 373 THROTTLE_OPEN_PERCENTAGE_2 255 "Signal invalid" ;
+VAL_ 373 HANDLE_GRIP_OPEN_PERCENTAGE_2 255 "Signal invalid" ;
+VAL_ 373 PARAMETER_1_EMS_RM_FDBK 7 "Signal invalid" 6 "Reserve" 5 "Level 5" 4 "Level 4" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 373 PARAMETER_2_EMS_RM_FDBK 7 "Signal invalid" 6 "Reserve" 5 "Reserve" 4 "Reserve" 3 "Level 3" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 373 PARAMETER_3_EMS_RM_FDBK 3 "Signal invalid" 2 "Level 2" 1 "Level 1" 0 "Reserve" ;
+VAL_ 373 PARAMETER_4_EMS_RM_FDBK 4 "Signal invalid" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 848 ENGINE_TEMPERATURE 255 "Signal invalid" ;
+VAL_ 848 SIDE_STAND_STATUS 0 "Side stand switch defective" 1 "Side stand retracted" 2 "Side stand out" 3 "Signal invalid" ;
+VAL_ 848 ENGINE_WARNING 0 "Warning ON" 1 "Warning OFF" ;
+VAL_ 848 MIL_STATUS 0 "MIL OFF" 1 "MIL ON" ;
+VAL_ 848 RUNNING_IN_MODE_STATUS 0 "Running In mode Enabled" 1 "Running in mode disabled" 2 "Reserve" 3 "Signal invalid" ;
+VAL_ 848 GEAR_SHIFT_INDICATION 0 "Gear Shift Indication Down ON" 1 "Gear Shift Indication Up ON" 2 "Gear Shift Indication OFF" 3 "Signal invalid" ;
+VAL_ 848 OVER_TEMPERATURE_INDICATION 0 "Warning OFF" 1 "Warning ON" ;
+VAL_ 848 COOLING_FAN_RELAY_STATUS 0 "Cooling Fan relay OFF" 1 "Cooling Fan relay ON" ;
+VAL_ 848 COOLANT_TEMPERATURE 255 "Signal invalid" ;
+VAL_ 848 INJECTED_FUEL 65535 "Signal invalid" ;
+VAL_ 848 ENGINE_ECU_ISS_STATUS 0 "Engine run/stop due to normal operation" 1 "Veh stop due to ISS condition" 2 "Veh start request due to ISS condition" 3 "ISS disable due to condition not met" ;
+VAL_ 848 CYLINDER_DEACTIVATION_STATUS 0 "No cylinder deactivated" 1 "Single cylinder deactivated" 2 "Reserved" 3 "All cylinders deactivated" ;
+VAL_ 849 ALIVE_COUNTER_ENGINE_DATA_6 15 "Signal invalid" ;
+VAL_ 849 QSS_FEATURE_AVAILABILITY_STATUS 3 "Signal Invalid" 2 "QS Available with error" 1 "QS Available" 0 "QS Not available" ;
+VAL_ 849 QSS_CLUSTER_ACTIVATION_FDBCK 1 "Active" 0 "Not Active" ;
+VAL_ 849 KL15_STATUS 0 "KL 15 OFF" 1 "KL 15 ON" 2 "Reserved" 3 "Signal invalid" ;
+VAL_ 849 ISS_LAMP 0 "Lamp OFF" 1 "Lamp blink" 2 "Lamp ON" 3 "Reserved" ;
+VAL_ 850 INTAKE_AIR_TEMPERATURE 255 "Signal invalid" ;
+VAL_ 850 MANIFOLD_AIR_PRESSURE 255 "Signal invalid" ;
+VAL_ 850 AMBIENT_PRESSURE 1023 "Signal invalid" ;
+VAL_ 850 REDUNDANT_ODOMETER 1048575 "Signal invalid" ;
+VAL_ 850 EMS_VARIANT_CODE 255 "SIGNAL INVALID" 0 "QS=0,CC=0,TC=0,DTC=0" 1 "QS=0,CC=0,TC=1,DTC=0" 2 "QS=0,CC=1,TC=0,DTC=0" 3 "QS=0,CC=1,TC=1,DTC=0" 4 "QS=1,CC=0,TC=0,DTC=0" 5 "QS=1,CC=0,TC=1,DTC=0" 6 "QS=1,CC=1,TC=0,DTC=0" 7 "QS=1,CC=1,TC=1,DTC=0" 8 "QS=0,CC=0,TC=0,DTC=1" 9 "QS=0,CC=0,TC=1,DTC=1" 10 "QS=0,CC=1,TC=0,DTC=1" 11 "QS=0,CC=1,TC=1,DTC=1" 12 "QS=1,CC=0,TC=0,DTC=1" 13 "QS=1,CC=0,TC=1,DTC=1" 14 "QS=1,CC=1,TC=0,DTC=1" 15 "QS=1,CC=1,TC=1,DTC=1" ;
+VAL_ 850 OIL_PRESSURE_SWITCH_STATUS 0 "Switch closed" 1 "Switch open" 2 "Reserved" 3 "Signal invalid" ;
+VAL_ 850 MANIFOLD_AIR_PRESSURE_2 255 "Signal invalid" ;
+VAL_ 851 ALIVE_COUNTER_PECU_OPMSG1 15 "Signal Invalid" ;
+VAL_ 851 PECU_CLAMP_STATE 0 "OFF" 1 "IGN ON" 2 "CRANK ON (Engine ON)" 3 "RUN (Engine RUN)" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 851 PECU_CLAMP_STATE_STATUS 0 "Valid / Default" 1 "invalid" ;
+VAL_ 851 IG_OFF_REQUEST 0 "No Action" 1 "Ignition OFF" 2 "IG Off Wait For acknowledgement" 3 "Signal Invalid" ;
+VAL_ 851 ELOCK_STATE 0 "Error State" 1 "Locked" 2 "UnLocked" 3 "Invalid" ;
+VAL_ 851 KEYLESS_SWITCH_PRESS_STATUS 0 "Keyless switch short press" 1 "Keyless switch long press" 2 "Keyless switch very long press" 3 "keyless switch error" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Signal Invalid" ;
+VAL_ 851 PEPSECU_ERROR_STATUS 0 "No Error present" 1 "Error present" ;
+VAL_ 851 CLUSTER_NOTIFICATION 0 "Notification Off" 1 "Notification ON" ;
+VAL_ 852 NO_KEYFOB_DETECTED_WARN 0 "Keyfob detected" 1 "No Keyfob Detected" ;
+VAL_ 852 KEYFOB_LOWBATTERY_WARN 0 "Keyfob has nominal battery" 1 "Keyfob low battery" ;
+VAL_ 853 CLUSTER_SUB_ID 0 "Default" 1 "Authentication request" 2 "Reply message" 3 "Reserved" ;
+VAL_ 854 VCU_SUB_ID 0 "Default" 1 "Random number" 2 "Authentication result" 3 "Reserved" ;
+VAL_ 854 VCU_AUTH_RESULT 0 "Successful" 1 "Failed" 2 "Reserved" ;
+VAL_ 1104 ALIVE_COUNTER_ABS_DATA_1 15 "Signal invalid" ;
+VAL_ 1104 ABS_ACTUATION_STATUS 3 "Signal Invalid" 2 "ABS is not actuated" 1 "ABS is actuated" 0 "Reserve" ;
+VAL_ 1104 BRAKE_SWITCH_STATUS_ABS 3 "Signal Invalid" 2 "Brake not actuated" 1 "Brake actuated" 0 "Reserve" ;
+VAL_ 1104 BRAKE_PAD_PRESSURE_FRONT 255 "Signal invalid" ;
+VAL_ 1104 EMERGENCY_STOP_SIGNAL_ST 0 "ESS OFF" 1 "ESS ON Lvl 1" 2 "ESS ON Lvl 2" 3 "Signal invalid" ;
+VAL_ 1104 DISTANCE_FRONT 4095 "Signal invalid" ;
+VAL_ 1104 DISTANCE_REAR 4095 "Signal invalid" ;
+VAL_ 1104 ABS_ON_OFF_SET_FDBK 0 "Turn OFF ABS" 1 "Turn ON ABS" ;
+VAL_ 1104 ABS_OFF_FEATURE_AVAIL_STATUS 0 "Feature not available" 1 "Enable Turn OFF ABS" 2 "Enable Turn OFF Rear ABS only" 3 "Reserved" ;
+VAL_ 1104 BRAKE_PAD_PRESSURE_REAR 255 "Signal invalid" ;
+VAL_ 1105 ALIVE_COUNTER_SPEED 15 "Signal invalid" ;
+VAL_ 1105 WHEEL_SPEED_REAR 8191 "Signal invalid" ;
+VAL_ 1105 WHEEL_SPEED_FRONT 8191 "Signal invalid" ;
+VAL_ 1105 WHEEL_SPEED_REAR_STATUS 0 "Reserved" 1 "Sensor in order" 2 "Sensor defect" 3 "Signal invalid" ;
+VAL_ 1105 WHEEL_SPEED_FRONT_STATUS 0 "Reserved" 1 "Sensor in order" 2 "Sensor defect" 3 "Signal invalid" ;
+VAL_ 1105 LC_STATUS 0 "LC not active" 1 "LC active" 2 "LC error" 3 "LC not available" 4 "LC disabled by Rider" 5 "Reserved" 6 "Reserved" 7 "Signal invalid" ;
+VAL_ 1105 NUMBER_OF_LAUNCHES 0 "No launch" 1 "Launch 1" 2 "Launch 2" 3 "Launch 3" ;
+VAL_ 1105 ABS_STATUS 0 "ABS- System shut down by driver" 1 "ABS-Control active" 2 "ABS Malfunction" 3 "ABS- System in the release mode" 4 "ABS-System operational" 5 "RLP malfunction" 6 "Cornering ABS not working" 7 "Signal invalid" ;
+VAL_ 1109 ALIVE_COUNTER_ABS_FEATURE_EN 15 "Signal Invalid" ;
+VAL_ 1109 FEATURE_EN_RLP 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_SDC 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_MLC 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_WC 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_IMU 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_DTC 0 "Disabled" 1 "Enabled" ;
+VAL_ 1109 FEATURE_EN_LC 0 "Disabled" 1 "Enabled" ;
+VAL_ 1317 ALIVE_COUNTER_R_RADAR 15 "Signal invalid" ;
+VAL_ 1317 BSD_LEFT_WARNINGS 0 "No Warning" 1 "Left BSD warning level 1 (Continuous ON)" 2 "Left BSD warning level 2 (Flashing)" 3 "Reserved" ;
+VAL_ 1317 BSD_RIGHT_WARNINGS 0 "No Warning" 1 "Right BSD warning level 1 (Continuous ON)" 2 "Right BSD warning level 2 (Flashing)" 3 "Reserved" ;
+VAL_ 1317 LCA_LEFT_WARNINGS 0 "No Warning" 1 "Left LCA warning level 1 (Continuous ON)" 2 "Left LCA warning level 2 (Flashing)" 3 "Reserved" ;
+VAL_ 1317 LCA_RIGHT_WARNINGS 0 "No Warning" 1 "Right LCA warning level 1 (Continuous ON)" 2 "Right LCA warning level 2 (Flashing)" 3 "Reserved" ;
+VAL_ 1317 RPA_WARNINGS 0 "No Warning" 1 "RPA warning level 1" 2 "RPA warning level 2" 3 "RPA warning level 3" ;
+VAL_ 1317 BSD_MODE_ACK 0 "Not acknowledged" 1 "Acknowledged" ;
+VAL_ 1317 LCA_MODE_ACK 0 "Not acknowledged" 1 "Acknowledged" ;
+VAL_ 1317 RPA_MODE_ACK 0 "Not acknowledged" 1 "Acknowledged" ;
+VAL_ 1317 BLINK_LEFT 0 "Inactive" 1 "Active" ;
+VAL_ 1317 BLINK_RIGHT 0 "Inactive" 1 "Active" ;
+VAL_ 1360 TIMER_SECONDS 16777215 "Signal invalid" ;
+VAL_ 1360 ODO_CLUSTER 1048575 "Signal invalid" ;
+VAL_ 1360 CLUSTER_VARIANT_CODE 255 "SIGNAL INVALID" 0 "QS=0,CC=0,TC=0,DTC=0" 1 "QS=0,CC=0,TC=1,DTC=0" 2 "QS=0,CC=1,TC=0,DTC=0" 3 "QS=0,CC=1,TC=1,DTC=0" 4 "QS=1,CC=0,TC=0,DTC=0" 5 "QS=1,CC=0,TC=1,DTC=0" 6 "QS=1,CC=1,TC=0,DTC=0" 7 "QS=1,CC=1,TC=1,DTC=0" 8 "QS=0,CC=0,TC=0,DTC=1" 9 "QS=0,CC=0,TC=1,DTC=1" 10 "QS=0,CC=1,TC=0,DTC=1" 11 "QS=0,CC=1,TC=1,DTC=1" 12 "QS=1,CC=0,TC=0,DTC=1" 13 "QS=1,CC=0,TC=1,DTC=1" 14 "QS=1,CC=1,TC=0,DTC=1" 15 "QS=1,CC=1,TC=1,DTC=1" ;
+VAL_ 1360 ABS_VEH_CODE 15 "SIGNAL INVALID" 1 "U400" 2 "U490" 3 "N597_A" 4 "N597_B" 5 "N597_C" 6 "N600" ;
+VAL_ 1360 HORN_ENABLE_IP 0 "Horn disable o/p" 1 "Horn enable o/p" ;
+VAL_ 1360 HEATED_GRIP_LEVEL_IP 0 "HEAT LEVEL 0" 1 "HEAT LEVEL 1" 2 "HEAT LEVEL 2" 3 "HEAT LEVEL 3" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Level error" ;
+VAL_ 1360 PRECONDITION_STAT_SPEEDO 0 "Pre-conditioning inactive" 1 "Pre-conditioning active" ;
+VAL_ 1361 FUEL_LEVEL 255 "Signal invalid" ;
+VAL_ 1361 PHOTOSENSOR_OUTPUT 255 "Signal invalid" ;
+VAL_ 1361 TYRE_PRESSURE_FR 63 "Signal Invalid" ;
+VAL_ 1361 TYRE_PRESSURE_RR 63 "Signal Invalid" ;
+VAL_ 1361 TPMS_FR_BATTERY 7 "Signal invalid" ;
+VAL_ 1361 TPMS_RR_BATTERY 7 "Signal invalid" ;
+VAL_ 1361 VEHICLE_BATTERY_VOLTAGE 255 "Signal invalid" ;
+VAL_ 1361 HEATED_GRIP_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1361 HAPTIC_GRIP_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1361 WINDSHIELD_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1361 KEYLESS_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1361 CLIMATIC_SEAT_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1361 HOT_SEAT_FEAT_EN 0 "Feature not available" 1 "Feature available" ;
+VAL_ 1376 GRIP_HEAT_LEVEL_STATUS_LH 0 "OFF" 1 "10%" 2 "30%" 3 "50%" 4 "70%" 5 "90%" 6 "100%" 7 "Error" ;
+VAL_ 1376 GRIP_HEAT_LEVEL_STATUS_RH 0 "OFF" 1 "10%" 2 "30%" 3 "50%" 4 "70%" 5 "90%" 6 "100%" 7 "Error" ;
+VAL_ 1376 GRIP_HAPTIC_LEVEL_STATUS_LH 0 "OFF" 1 "10%" 2 "30%" 3 "50%" 4 "70%" 5 "90%" 6 "100%" 7 "Error" ;
+VAL_ 1376 GRIP_HAPTIC_LEVEL_STATUS_RH 0 "OFF" 1 "10%" 2 "30%" 3 "50%" 4 "70%" 5 "90%" 6 "100%" 7 "Error" ;
+VAL_ 1376 USB_CHARGER_POWER_OP 0 "USB charger output OFF" 1 "USB charger output ON" 2 "Reserved" 3 "Output fault" ;
+VAL_ 1376 ACC_12V_SOCKET_POWER_OP 0 "12V socket output OFF" 1 "12V socket output ON" 2 "Reserved" 3 "Output fault" ;
+VAL_ 1376 HORN_ACTIVATION_ENABLE 0 "No Horn" 1 "Single horn active" 2 "Reserved" 3 "Horn o/p Fault" ;
+VAL_ 1376 SEAT_SWITCH_STATUS_IP 0 "Switch open" 1 "Switch closed" 2 "Reserved" 3 "Switch fault" ;
+VAL_ 1376 TANK_LID_SWITCH_STATUS_IP 0 "Switch open" 1 "Switch closed" 2 "Reserved" 3 "Switch fault" ;
+VAL_ 1376 SEAT_ACTUATOR_OP 0 "Actuation disabled" 1 "Actuation enabled" 2 "Reserved" 3 "Error" ;
+VAL_ 1376 TANK_LID_ACTUATOR_OP 0 "Actuation disabled" 1 "Actuation enabled" 2 "Reserved" 3 "Error" ;
+VAL_ 1376 IGN_OP_STATUS 0 "Ignition output disabled" 1 "Ignition output enabled" 2 "Reserved" 3 "Ignition output fault" ;
+VAL_ 1392 ALIVE_COUNTER_HEADLAMP_CONTROL 15 "Signal invalid" ;
+VAL_ 1392 DRL_PATTERN_SET 0 "Normal" 1 "Pattern 1" 2 "Pattern 2" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1392 HL_FOLLOW_ME_HOME_SET 0 "OFF" 1 "Level 1" 2 "Level 2" 3 "Level 3" ;
+VAL_ 1392 DYNAMIC_INTENSITY_LEVEL_SET 0 "Default / Level 1" 1 "Level 2" 2 "Level 3" 3 "Reserved" ;
+VAL_ 1392 HL_CTRL_MODE 0 "Manual mode" 1 "Auto mode" ;
+VAL_ 1392 DYNAMIC_HB_CTRL_MODE 0 "Manual mode" 1 "Auto mode" ;
+VAL_ 1392 HL_DAY_NIGHT_MODE 0 "Night/ DRL OFF/ Headlamp ON" 1 "Day / DRL ON / Headlamp OFF" ;
+VAL_ 1392 BEND_LAMP_ENABLE 0 "Disable" 1 "Enable" ;
+VAL_ 1392 FOG_LAMP_CONTROL_LH 0 "Lamp off" 1 "Lamp On" ;
+VAL_ 1392 FOG_LAMP_CONTROL_RH 0 "Lamp off" 1 "Lamp On" ;
+VAL_ 1392 HL_BEAM_CONTROL 0 "High beam OFF / Only Low beam" 1 "High beam ON" ;
+VAL_ 1400 HL_BEAM_STATUS 0 "Low beam ON " 1 "High beam ON" ;
+VAL_ 1400 HL_DAY_NIGHT_MODE_FDBK 0 "Night DRL OFF HL ON" 1 "Day DRL ON HL OFF" ;
+VAL_ 1400 DRL_PATTERN_EXEC_STATUS 0 "Not Executed" 1 "Executed" ;
+VAL_ 1400 DYNAMIC_INTENSITY_LEVEL_FDBK 0 "Default/Level 1" 1 "Level 2" 2 "Level 3" 3 "Reserved" ;
+VAL_ 1400 HL_ERR_STATUS 0 "No error" 1 "Undervoltage protection" 2 "Overvoltage protection" 3 "HB Failure" 4 "LB Failure" 5 "DRL/POS Failure" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1400 DRL_PATTERN_FDBK 0 "Normal" 1 "Pattern 1" 2 "Pattern 2" 3 "Reserved" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1400 CORNER_LAMP_L1_CNTRL 0 "No lamp ON" 1 "Left lamp ON" 2 "Right lamp ON" 3 "Invalid" ;
+VAL_ 1400 CORNER_LAMP_L2_CNTRL 0 "No lamp ON" 1 "Left lamp ON" 2 "Right lamp ON" 3 "Invalid" ;
+VAL_ 1488 REQUESTED_LEVEL 0 "off" 1 "hot level1" 2 "hot level2" 3 "hot level3" 4 "reserved" 5 "reserved" 6 "reserved" 15 "cold level1" 16 "cold level2" 17 "cold level3" 18 "reserved" 19 "reserved" 20 "reserved" 21 "reserved" 31 "invalid" ;
+VAL_ 1488 COOLSEAT_FEATURE_EN_ACK 0 "Feature Not enabled on vehicle" 1 "Feature enabled on vehicle" 3 "Invalid" ;
+VAL_ 1488 SEAT_ERROR 0 "no error" 1 "mode not supported" 2 "peltier not working" 3 "error in fan" 4 "thermistor failure)" 5 "error in control module" 6 "Abnormal Supply Voltage" 15 "invalid" ;
+VAL_ 1488 TEMPERATURE_PELTIER1 102 "Out Of Range" 101 "Signal Invalid" ;
+VAL_ 1488 TEMPERATURE_PELTIER2 102 "Out Of Range" 101 "Signal Invalid" ;
+VAL_ 1488 TEMPERATURE_AMBIENT 102 "Out Of Range" 101 "Signal Invalid" ;
+VAL_ 1489 SEAT_TARGET_LEVEL 0 "off" 1 "hot level1" 2 "hot level2" 3 "hot level3" 4 "reserved" 5 "reserved" 6 "reserved" 15 "cold level1" 16 "cold level2" 17 "cold level3" 18 "reserved" 19 "reserved" 20 "reserved" 21 "reserved" 31 "invalid" ;
+VAL_ 1489 COOLSEAT_FEATURE_EN 0 "Feature Not enabled on vehicle" 1 "Feature enabled on vehicle" 3 "Invalid" ;
+VAL_ 1184 TC_ACTIVATION_REASON 0 "TC Not active" 1 "TC Activated for Wheelie control" 2 "TC Activated for Slip control" 3 "Reserved" ;
+VAL_ 1184 CORNERING_ABS_STATUS 0 "Cornering ABS not active" 1 "Cornering ABS active" 2 "Reserved" 3 "Reserved" ;
+VAL_ 1184 ABS_ACTUATION_DEBUG 0 "ABS Actuated for RLP" 1 "ABS Actuated for Slip control" 2 "ABS is not actuated" 3 "Reserved" ;
+VAL_ 1184 WHEEL_SLIP_PERCENTAGE 255 "Signal Invalid" ;
+VAL_ 1184 VEHICLE_ACC 255 "Signal Invalid" ;
+
